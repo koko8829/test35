@@ -6,5 +6,6 @@
         <ChildFrame id="WorkFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Form_Work.xfdl"/>
       </MainFrame>
     </Layout>
+    <Style url="xcssrc::new_style.xcss"/>
   </Application>
 </ADL>

@@ -3,7 +3,7 @@
   <Form id="test2" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <Button id="Button00" taborder="0" text="Button00" left="250" top="110" width="120" height="50"/>
+        <Button id="Button00" taborder="0" text="Button00" left="70" top="120" width="120" height="50"/>
       </Layout>
     </Layouts>
   </Form>

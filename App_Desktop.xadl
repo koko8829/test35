@@ -7,5 +7,6 @@
       </MainFrame>
     </Layout>
     <Style url="xcssrc::new_style.xcss"/>
+    <Style url="xcssrc::test.xcss"/>
   </Application>
 </ADL>

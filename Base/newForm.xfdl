@@ -6,7 +6,11 @@
         <Button id="Button00" taborder="0" text="Button03" left="70" top="130" width="120" height="50"/>
         <Button id="Button01" taborder="1" text="Button01" left="58" top="36" width="155" height="38"/>
         <Button id="Button02" taborder="2" text="Button02" left="340" top="100" width="120" height="50"/>
+<<<<<<< HEAD
         <Button id="Button03" taborder="3" text="Button03" left="416" top="200" width="120" height="50"/>
+=======
+        <Button id="Button05" taborder="5" text="Button05" left="240" top="200" width="120" height="50"/>
+>>>>>>> 14d2de32c003e60fb6b95cefb86b21a4fcab3473
       </Layout>
     </Layouts>
   </Form>

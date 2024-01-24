@@ -1,0 +1,22 @@
+{
+  "elements": [
+    {
+      "id": "u_05",
+      "type": "heading1",
+      "content": "서비스5 아이디",
+      "option": {
+        "sectionView": "tab"
+      }
+    },
+    {
+      "id": "u_06",
+      "type": "normal",
+      "content": "서버 아이디는 <strong>총 37자의 문자열</strong>입니다."
+    },
+    {
+      "id": "u_07",
+      "type": "normal",
+      "content": "3서버 아이디는 <strong>총 37자의 문자열</strong>입니다."
+    }
+  ]
+}

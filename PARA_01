@@ -12,6 +12,11 @@
       "id": "u_02",
       "type": "normal",
       "content": "서버 아이디는 <strong>총 37자의 문자열</strong>입니다."
+    },
+    {
+      "id": "u_03",
+      "type": "normal",
+      "content": "3서버 아이디는 <strong>총 37자의 문자열</strong>입니다."
     }
   ]
 }

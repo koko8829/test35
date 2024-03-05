@@ -2,13 +2,18 @@
   "elements": [
     {
       "id": "u_01",
-      "type": "headline",
-      "content": "Description"
+      "type": "heading1",
+      "content": "개요"
     },
     {
       "id": "u_02",
       "type": "normal",
       "content": "This is a component where users can draw simple figures or signatures."
+    },
+    {
+      "id": "u_03",
+      "type": "heading2",
+      "content": "Supported Environments"
     }
   ]
 }

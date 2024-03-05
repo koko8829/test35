@@ -1,16 +1,16 @@
 {
   "items": [
     {
-      "id": "i_01",
-      "name": "아이템 01"
+      "id": "PARA_01",
+      "name": "PARA_01"
     },
     {
-      "id": "i_02",
-      "name": "아이템 02"
+      "id": "PARA_03",
+      "name": "PARA_03"
     },
     {
-      "id": "i_03",
-      "name": "아이템 03"
+      "id": "PARA_03",
+      "name": "PARA_03"
     }
   ]
 }

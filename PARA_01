@@ -7,33 +7,37 @@
     },
     {
       "id": "u_02",
-      "type": "normal",
-      "content": "간단한 도형이나 서명등을 사용자가 직접 화면에 그릴 수 있는 컴포넌트입니다."
+      "type": "pre",
+      "content": "Calendar 는 날짜와 시간을 입력 받기 위한 컴포넌트입니다."
     },
     {
       "id": "u_03",
       "type": "heading2",
-      "content": "Supported Environments"
+      "content": "지원 환경"
     },
     {
       "id": "u_04",
       "type": "table",
       "content": "<table class='table column_count_7'><caption></caption><thead><tr><th colspan='2'><div>Desktop NRE</div></th><th colspan='5'><div>Desktop WRE</div></th></tr></thead><tbody><tr><td><div>■ Windows</div></td><td><div>■ macOS</div></td><td><div>■ Edge</div></td><td><div>■ Chrome</div></td><td><div>■ Safari</div></td><td><div>■ Firefox</div></td><td><div>■ Opera</div></td></tr><tr><th colspan='2'><div>Mobile NRE</div></th><th colspan='5'><div>Mobile WRE</div></th></tr><tr><td><div>■ Android</div></td><td><div>■ iOS/iPadOS</div></td><td><div>■ Android</div></td><td><div>■ iOS/iPadOS</div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr></tbody></table>",
       "option": {
-        "omit_caption": "true",
         "table_layout": "user",
         "table_layout_setting": "110,110,110,110,110,110,110"
       }
     },
     {
+      "id": "u_02",
+      "type": "pre",
+      "content": "- 날짜와 시간의 화면출력보다 입력과 관련된 기능을 많이 제공합니다.\n\n- 입력영역과 팝업달력 형식, 월단위 달력 형식, 입력영역과 스핀버튼 형식을 type 속성값을 사용하여 선택할 수 있습니다.\n\n- 입력된 날짜의 정합성을 검사하는 기능이 내장되어 있습니다.\n\n- innerdataset 속성을 사용하여 특정날짜에 효과를 줄 수 있습니다.\n\n- 입력되는 날짜의 형식을 editformat 속성값을 사용하여 설정할 수 있습니다.\n   표시되는 날짜의 형식을 dateformat 속성값을 사용하여 설정할 수 있습니다.\n   editformat, dateformat 속성에 \"LONGDATE\", \"SHORTDATE\" 설정 시 국가별로 다른 형식의 날짜를 설정할 수 있습니다.\n\n- 화면에 제공되는 스핀버튼 또는 키보드의 Up/Down Key 를 이용해 편리하게 입력할 수 있습니다.\n   Calendar 와 팝업달력에 표시되는 스핀버튼에 LButtonDown 상태를 유지할 경우 날짜값이 연속적으로 변경됩니다.\n\n- Calendar 의 팝업달력에서 날짜선택은 마우스 왼쪽 버튼으로 Down&Up 을 수행하여야 합니다.\n\n- Calendar 의 dropbutton 과 팝업달력이 겹쳐질 경우 팝업달력이 열린 후 곧바로 닫히는 현상이 나타날 수 있습니다.\n   클릭위치가 중첩되어 나타나는 문제로 버그가 아니므로 dropbutton 과 팝업달력이 중첩되지 않도록 설정값을 변경하여야 합니다.\n\n- editformat 속성값에 시간관련 마스크 문자를 설정한 경우 시간은 편집영역에서 직접 입력하여야 합니다.\n   시간은 입력 시 24시간 형식으로 입력하여야 하며 표시는 12시간 형식을 사용할 수 있습니다.\n\n- calendaredit 영역에 직접 날짜값을 입력하는 경우 유효하지 않은 값이 입력됐을 때 아래와 같은 규칙으로 정합성을 검사하고 날짜값을 반영합니다.\n\n(1) 기존값이 윤일(閏日)인 경우\n기존값이 윤일인 경우 윤년이 아닌 년도값을 입력하면 2월 28일로 날짜값을 반영합니다.\n예를 들어 기존값이 \"2020-02-29\"인 경우 년도값으로 \"2025\"를 입력하면 \"2025-02-28\"로 날짜값을 반영합니다.\n\n(2) 일의 자리 입력 시 유효하지 않은 숫자 처리\n월 또는 일 편집 영역에 일의 자리를 입력할 때 유효하지 않은 숫자가 입력되면 십의 자리는 \"0\"으로 처리하고 일의 자리만 유지합니다.\n월 편집 영역에 13에서 19 사이의 숫자를 입력하거나 일 편집 영역에 maxday보다 큰 숫자를 입력하는 경우가 해당합니다.\n예를 들어 월 편집 영역에 \"13\"을 입력하면 십의 자리를 \"0\"으로 처리해서 \"03\"으로 날짜값을 반영합니다. 그리고 캐럿은 일 편집 영역 십의 자리 앞으로 이동합니다.\n일 편집 영역에 \"32\"를 입력하면 십의 자리를 \"0\"으로 처리해서 \"02\"으로 날짜값을 반영합니다(2월인 경우에는 십의 자리에 3을 입력할 때 유효하지 않은 숫자로 처리됩니다). 그리고 캐럿은 일 편집 영역 일의 자리 뒤로 이동합니다.\n\n(3) 십의 자리 입력 시 유효하지 않는 숫자 처리\n월 또는 일 편집 영역에 십의 자리를 입력할 때 유효하지 않은 숫자가 입력되면 십의 자리는 \"0\"으로 처리하고 일의 자리에 반영합니다.\n예를 들어 기존값이 \"2020-11-11\"인 경우 월 편집 영역 십의 자리에 \"2\"를 입력하면 \"2020-02-11\"로 날짜값을 반영합니다. 그리고 캐럿은 일 편집 영역 십의 자리 앞으로 이동합니다.\n일 편집 영역 십의 자리에 \"4\"를 입력하면 \"2020-11-04\"로 날짜값을 반영합니다. 그리고 캐럿은 일 편집 영역 일의 자리 뒤로 이동합니다.\n\n◆ Mobile 제약\n\n- 모바일 환경에서는 기능상의 문제로 스핀버튼에 터치를 유지하여도 날짜값이 연속적으로 변경되지 않습니다."
+    },
+    {
       "id": "u_05",
       "type": "heading2",
-      "content": "Structure"
+      "content": "컴포넌트 구조"
     },
     {
       "id": "u_06",
       "type": "normal",
-      "content": "<img src='https://github.com/koko8829/chm_TEST/blob/main/2663%5Cnexacro17_22_Sketch1.png?raw=true'/>"
+      "content": "<img src='https://github.com/koko8829/chm_TEST/blob/main/2663%5Cnexacro17_02_Calendar4.png?raw=true'/>"
     }
   ]
 }

@@ -119,6 +119,38 @@ def get_table_content(soup, title, layout, bTitle=None):
         else:
             print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다.")
 
+# 속성 목록 처리
+def set_property_list(soup, title="Property"):
+    content_title_td = soup.find('td', class_='sub_title', string=title)
+    if not content_title_td:
+        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
+    
+    table_tag = content_title_td.find_next('table')
+    property_list = [a_tag.string for a_tag in table_tag.find_all('a')]
+    for property in property_list:
+        add_element("u_16"+property, "heading3", property)
+
+# 메서드 목록 처리
+def set_method_list(soup, title="Method"):
+    content_title_td = soup.find('td', class_='sub_title', string=title)
+    if not content_title_td:
+        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
+    
+    table_tag = content_title_td.find_next('table')
+    method_list = [a_tag.string for a_tag in table_tag.find_all('a')]
+    for method in method_list:
+        add_element("u_16"+method, "heading3", method)
+
+# 이벤트 목록 처리
+def set_event_list(soup, title="Event"):
+    content_title_td = soup.find('td', class_='sub_title', string=title)
+    if not content_title_td:
+        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
+    
+    table_tag = content_title_td.find_next('table')
+    event_list = [a_tag.string for a_tag in table_tag.find_all('a')]
+    for event in event_list:
+        add_element("u_16"+event, "heading3", event)        
 
 # (공통 함수) Structure 이미지 파일명 가져오기
 # Object > Structure
@@ -197,12 +229,18 @@ add_element("u_11", "heading2", "Basic Key Action")
 get_table_content(soup, "Basic Key Action", "120,120,?", True)
 add_element("u_12", "heading2", "Accessibility Key Action")
 get_table_content(soup, "Accessibility Key Action", "120,120,?", True)
-add_element("u_13", "heading2", "Constructor")
+add_element("u_13", "heading2", "생성자")
 get_table_content(soup, "Constructor", "120,120,?", True)
 add_element("u_14", "heading2", "Status")
 get_table_content(soup, "Status", "120,120,?", True)
 add_element("u_15", "heading2", "Control")
 get_table_content(soup, "Control", "120,120,?", True)
+add_element("u_16", "heading2", "속성")
+set_property_list(soup)
+add_element("u_17", "heading2", "메서드")
+set_method_list(soup)
+add_element("u_18", "heading2", "이벤트")
+set_event_list(soup)
 
 data = {
     "elements": elements

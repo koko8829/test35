@@ -4,8 +4,9 @@ import random
 from bs4 import BeautifulSoup
 
 # URL에서 HTML 가져오기
-url = 'https://raw.githubusercontent.com/koko8829/chm_TEST/main/2663%5CENG%5CComponents_Component_Calendar.html'
-response = requests.get(url)
+url_github = 'https://raw.githubusercontent.com/koko8829/chm_TEST/main/'
+url_object = url_github+'Components_Component_Calendar.html'
+response = requests.get(url_object)
 html = response.text
 
 soup = BeautifulSoup(html, 'html.parser')
@@ -119,38 +120,34 @@ def get_table_content(soup, title, layout, bTitle=None):
         else:
             print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다.")
 
-# 속성 목록 처리
-def set_property_list(soup, title="Property"):
+# 속성, 메서드, 이벤트 목록 처리
+def set_item_list(soup, title="Property"):
     content_title_td = soup.find('td', class_='sub_title', string=title)
     if not content_title_td:
         raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
     
     table_tag = content_title_td.find_next('table')
-    property_list = [a_tag.string for a_tag in table_tag.find_all('a')]
-    for property in property_list:
-        add_element("u_16"+property, "heading3", property)
+    item_list = [a_tag.string for a_tag in table_tag.find_all('a')]
+    for item in item_list:
+        if title=="Property":
+            set_property_data(item)
+        elif title=="Method":
+            set_method_date(item)
+        elif title=="Event":
+            set_event_data(item)
 
-# 메서드 목록 처리
-def set_method_list(soup, title="Method"):
-    content_title_td = soup.find('td', class_='sub_title', string=title)
-    if not content_title_td:
-        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
-    
-    table_tag = content_title_td.find_next('table')
-    method_list = [a_tag.string for a_tag in table_tag.find_all('a')]
-    for method in method_list:
-        add_element("u_16"+method, "heading3", method)
+# 속성 데이터 처리
+def set_property_data(property):
+    add_element("u_16"+property, "heading3", property)
 
-# 이벤트 목록 처리
-def set_event_list(soup, title="Event"):
-    content_title_td = soup.find('td', class_='sub_title', string=title)
-    if not content_title_td:
-        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
-    
-    table_tag = content_title_td.find_next('table')
-    event_list = [a_tag.string for a_tag in table_tag.find_all('a')]
-    for event in event_list:
-        add_element("u_16"+event, "heading3", event)        
+# 메서드 데이터 처리
+def set_method_data(method):
+    add_element("u_16"+method, "heading3", method)
+
+# 속성 데이터 처리
+def set_event_data(event):
+    add_element("u_16"+event, "heading3", event)        
+
 
 # (공통 함수) Structure 이미지 파일명 가져오기
 # Object > Structure
@@ -165,7 +162,7 @@ def get_structure_img(soup):
     else:
         print("Structure 이미지를 포함한 요소를 찾을 수 없습니다.")
     
-    return f"<img src='https://github.com/koko8829/chm_TEST/blob/main/2663%5C{structure_img}?raw=true'/>"
+    return f"<img src='{url_github}2663%5C{structure_img}?raw=true'/>"
 
 # (공통 함수) Supported Environments 표 생성
 # Object > Supported Environments
@@ -236,11 +233,11 @@ get_table_content(soup, "Status", "120,120,?", True)
 add_element("u_15", "heading2", "Control")
 get_table_content(soup, "Control", "120,120,?", True)
 add_element("u_16", "heading2", "속성")
-set_property_list(soup)
+set_item_list(soup, "Property")
 add_element("u_17", "heading2", "메서드")
-set_method_list(soup)
+set_item_list(soup, "Method")
 add_element("u_18", "heading2", "이벤트")
-set_event_list(soup)
+set_item_list(soup, "Event")
 
 data = {
     "elements": elements

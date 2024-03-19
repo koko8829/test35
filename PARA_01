@@ -45,12 +45,12 @@
       "content": "컴포넌트, 내부 컨텐츠 크기"
     },
     {
-      "id": "u_09_0.9223633282702162",
+      "id": "u_09_0.852336092228177",
       "type": "pre",
       "content": "Calendar 컴포넌트와 내부 컨텐츠 크기를 결정하는 기준입니다.\n\n- Calendar 컴포넌트의 type 속성값이 \"normal\" 일 경우 기준입니다."
     },
     {
-      "id": "u_10_0.5329001584046177",
+      "id": "u_10_0.3299579554576003",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>calendaredit Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 에서 dropbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>dropbutton Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 Width 에서 dropbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>buttonsize 속성값이 적용됩니다.\nbuttonsize 속성값이 없으면 Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>datepicker Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 left 속성값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>Calendar 컴포넌트의 bottom 속성값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>popupsize 속성값의  값이 적용됩니다.\npopupsize 속성값이 없으면 220 으로 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>popupsize 속성값의  값이 적용됩니다.\npopupsize 속성값이 없으면 200 으로 적용됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -59,12 +59,12 @@
       }
     },
     {
-      "id": "u_09_0.8515673355567697",
+      "id": "u_09_0.04066208416309358",
       "type": "pre",
       "content": "- Calendar 컴포넌트의 type 속성값이 \"spin\" 일 경우 기준입니다."
     },
     {
-      "id": "u_10_0.06682618545400687",
+      "id": "u_10_0.9405640748229807",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>calendaredit Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 에서 spinupbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>spinupbutton Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 Width 에서 spinupbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>buttonsize 속성값이 적용됩니다.\nbuttonsize 속성값이 없으면 Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 를 2로 나눈 몫이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>spindownbutton Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 Width 에서 spinupbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>Calendar 컴포넌트의 Height 에서 spinupbutton 컨트롤의 Height 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>buttonsize 속성값이 적용됩니다.\nbuttonsize 속성값이 없으면 Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 를 2로 나눈 몫이 적용됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -73,12 +73,12 @@
       }
     },
     {
-      "id": "u_09_0.4873482274901946",
+      "id": "u_09_0.43340757414075237",
       "type": "pre",
       "content": "- Calendar 컴포넌트의 type 속성값이 \"monthonly\" 일 경우 기준입니다."
     },
     {
-      "id": "u_10_0.6477772178812684",
+      "id": "u_10_0.2864572282910731",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>head Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 가 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>headheight 속성값이 적용됩니다.\nheadheight 속성값이 없으면 Calendar 컴포넌트의 Height 를 8 로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>prevbutton Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>nextbutton Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다. (오른쪽으로 정렬합니다.)</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>yearstatic Control</div></td></tr><tr><td>Left</td><td><div>monthstatic 컨트롤의 Width 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>monthstatic 컨트롤의 Height 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>텍스트 길이에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>텍스트 크기에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>monthstatic Control</div></td></tr><tr><td>Left</td><td><div>yearstatic 컨트롤의 Width 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>yearstatic 컨트롤의 Height 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>텍스트 길이에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>텍스트 크기에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>body Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>head 컨트롤의 Height 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 에서 head 컨트롤의 Height 를 뺀 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>weekband Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>body 컨트롤의 Width 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 body 컨트롤의 Height 를 7 로 나눈 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>weekitem Control</div></td></tr><tr><td>Left</td><td><div>아이템별로 요일에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 weekband 컨트롤의 Width 를 7로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>weekband 컨트롤의 Height 값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>dayitem Control</div></td></tr><tr><td>Left</td><td><div>아이템별로 요일에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>아이템별로 주에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 weekband 컨트롤의 Width 를 7로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 body 컨트롤의 Height 를 7 로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -87,12 +87,12 @@
       }
     },
     {
-      "id": "u_09_0.7175114196626828",
+      "id": "u_09_0.04552491966447669",
       "type": "pre",
       "content": "- Calendar 컴포넌트의 datepickerchangetype 속성값이 \"button\"(또는 \"normal\"이고 Mobile 환경에서 실행)인 경우 기준입니다."
     },
     {
-      "id": "u_10_0.8773465557162317",
+      "id": "u_10_0.13139196007246456",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>DatePickerHeadControl</div></td></tr><tr><td>Left</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>popupsize로 지정한 Width 값이 적용됩니다. \n해당 값 미설정 시 calendarpopup 컨트롤 Width 와 동일한 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>popupsize로 지정한 Height 값이 적용됩니다.\n해당 값 미설정 시 Calendar 컴포넌트의 headheight 속성 값이 적용됩니다. 해당 값 미설정 시 기본 값(27.5px)이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>DatePickerBodyControl</div></td></tr><tr><td>Left</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값에 DatePickerHeadControl의 height를 추가한 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>popupsize로 지정한 Width 값이 적용됩니다. \n해당 값 미설정 시 calendarpopup 컨트롤 Width 와 동일한 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>popupsize로 지정한 Height 값이 적용됩니다.\n해당 값 미설정 시 calendarpopup에서 DatePickerHeadControl의 height를 제외한 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>dayitem</div></td></tr><tr><td>Left</td><td><div>아이템별로 요일에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>아이템별로 주에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 weekband 컨트롤의 Width 를 7로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 body 컨트롤의 Height 를 7 로 나눈 값이 적용됩니다.\n내부 콘텐츠의 Height 보다 작을 경우 내부 콘텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>monthitem</div></td></tr><tr><td>Left</td><td><div>아이템별로 월에 맞게 4개 단위로 나누어 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>head 컨트롤의 Height와 weekband 컨트롤의 Height를 더한 값을 시작으로 \n아이템별로 월에 맞게 4개 단위로 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>body 컨트롤의 Width를 4로 나눈 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>body 컨트롤의 Height를 4로 나눈 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>yearitem</div></td></tr><tr><td>Left</td><td><div>아이템별로 년에 맞게 4개 단위로 나누어 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>head 컨트롤의 Height와 weekband 컨트롤의 Height를 더한 값을 시작으로 \n아이템별로 년에 맞게 4개 단위로 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>body 컨트롤의 Width를 4로 나눈 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>body 컨트롤의 Height를 4로 나눈 값이 적용됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -106,7 +106,7 @@
       "content": "Basic Key Action"
     },
     {
-      "id": "u_10_0.5096218429361453",
+      "id": "u_10_0.26268176249234787",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th>Action</th><th>Key</th><th>Description</th></tr></thead><tbody><tr><td>포커스 이동</td><td>Tab</td><td><div>Tab 이동 순서에 따라 다음 컴포넌트로 포커스가 이동합니다.</div></td></tr><tr><td>DatePicker 열기</td><td>Alt + 아래방향키 또는 Option + 아래방향키</td><td><div>type 속성값이 \"normal\" 일 때 팝업달력(DatePicker)이 표시됩니다.</div></td></tr><tr><td>DatePicker 닫기</td><td>ESC</td><td><div>type 속성값이 \"normal\" 일 때 열려있는 팝업달력(DatePicker)을 닫습니다.</div></td></tr><tr><td>날짜 변경</td><td>상하방향키</td><td><div>type 속성값이 \"spin\" 일 때 캐럿위치의 년/월/일 값을 변경합니다.\n\n년/월/일 이 가질 수 있는 최저/최고값에 도달하면 반대값(최저면 최고값, 최고면 최저값)으로 변경됩니다.</div></td></tr><tr><td>날짜 결정</td><td>Enter</td><td><div>type 속성값이 \"normal\" 또는 \"monthonly\" 일 때 팝업달력(DatePIcker)에 선택된 날짜를 value 속성에 반영합니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>상하좌우방향키</td><td><div>DatePicker 에서 날짜가 이동됩니다.\n선택된 날짜를 결정하려면 Enter 를 입력하여야 합니다.\n\n첫 날짜에서 상/좌 방향키 또는 마지막 날짜에서 하/우 방향키 입력 시 월이 전환됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 좌우방향키</td><td><div>DatePicker 의 월이 이동됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 상하방향키</td><td><div>DatePicker 의 연도가 이동됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -120,12 +120,12 @@
       "content": "Accessibility Key Action"
     },
     {
-      "id": "u_09_0.5858329957954647",
+      "id": "u_09_0.6776241733283913",
       "type": "pre",
       "content": "접근성 기능이 활성화 되어 있을 때 적용되는 키 액션입니다."
     },
     {
-      "id": "u_10_0.21392632754091734",
+      "id": "u_10_0.053285949998808646",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th>Action</th><th>Key</th><th>Description</th></tr></thead><tbody><tr><td>포커스 이동</td><td>Tab</td><td><div>Tab 이동 순서에 따라 다음 컴포넌트로 포커스가 이동합니다.</div></td></tr><tr><td>선택상자 이동</td><td>상하방향키</td><td><div>Tab Order 가 이전/다음인 컴포넌트로 선택상자가 이동합니다.\n\ntype 속성값이 \"normal\" 일 때 표시된 팝업달력(DatePicker) 에서는 아무런 액션도 발생하지 않습니다.</div></td></tr><tr><td>DatePicker 열기</td><td>Alt + 아래방향키 또는 Option + 아래방향키</td><td><div>type 속성값이 \"normal\" 일 때 팝업달력(DatePicker)이 표시됩니다.</div></td></tr><tr><td>DatePicker 닫기</td><td>ESC</td><td><div>type 속성값이 \"normal\" 일 때 열려있는 팝업달력(DatePicker)을 닫습니다.</div></td></tr><tr><td>날짜 변경</td><td>Ctrl + 상하방향키</td><td><div>type 속성값이 \"spin\" 일 때 캐럿위치의 년/월/일 값을 변경합니다.\n\n년/월/일 이 가질 수 있는 최저/최고값에 도달하면 반대값(최저면 최고값, 최고면 최저값)으로 변경됩니다.</div></td></tr><tr><td>날짜 결정</td><td>Enter</td><td><div>type 속성값이 \"normal\" 또는 \"monthonly\" 일 때 팝업달력(DatePIcker)에 선택된 날짜를 value 속성에 반영합니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>좌우방향키</td><td><div>DatePicker 에서 날짜가 이동됩니다.\n선택된 날짜를 결정하려면 Enter 를 입력하여야 합니다.\n\n첫 날짜에서 좌측방향키 또는 마지막 날짜에서 우측방향키 입력 시 월이 전환됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 좌우방향키</td><td><div>DatePicker 의 월이 이동됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 상하방향키</td><td><div>DatePicker 의 연도가 이동됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -139,26 +139,26 @@
       "content": "Constructor"
     },
     {
-      "id": "u_09_0.6028720608846059",
+      "id": "u_09_0.18217443102640218",
       "type": "pre",
       "content": "Calendar.init( strName, vLeft, vTop , vWidth, vHeight [, vRight, vBottom, [vMinWidth, [vMaxWidth, [vMinHeight, [vMaxHeight]]]]] )"
     },
     {
-      "id": "u_10_0.9565112921381895",
+      "id": "u_10_0.5326597307943834",
       "type": "table",
-      "content": "<table><caption></caption><thead><tr><th>Parameters</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>strName</td><td>String</td><td><div>Calendar 의 ID를 문자열로 설정합니다.</div></td></tr><tr><td>vLeft</td><td>String, Number</td><td><div>Calendar 의 left 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 right 속성값을 기준으로 Calendar 의 left 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 left 가 결정됩니다.</div></td></tr><tr><td>vTop</td><td>String, Number</td><td><div>Calendar 의 top 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 bottom 속성값을 기준으로 Calendar 의 top 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 top 이 결정됩니다.</div></td></tr><tr><td>vWidth</td><td>String, Number</td><td><div>Calendar 의 width 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Calendar 의 width 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 width 가 결정됩니다.</div></td></tr><tr><td>vHeight</td><td>String, Number</td><td><div>Calendar 의 height 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Calendar 의 height 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 height 가 결정됩니다.</div></td></tr><tr><td>vRight</td><td>String, Number</td><td><div>Calendar 의 right 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvLeft, vWidth 값을 모두 설정했을 경우 vRight 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 left 속성값을 기준으로 Calendar 의 right 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 right 가 결정됩니다.</div></td></tr><tr><td>vBottom</td><td>String, Number</td><td><div>Calendar 의 bottom 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvTop, vHeight 값을 모두 설정했을 경우 vBottom 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 top 속성값을 기준으로 Calendar 의 bottom 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 bottom 이 결정됩니다.</div></td></tr><tr><td>vMinWidth</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최소 너비값을 pixel 단위의 숫자로 설정합니다.</div></td></tr><tr><td>vMaxWidth</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최대 너비값을 pixel 단위의 숫자로 설정합니다.\n\nvMinWidth 보다 작은 값을 설정하면 vMinWidth 값으로 설정됩니다.</div></td></tr><tr><td>vMinHeight</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최소 높이값을 pixel 단위의 숫자로 설정합니다.</div></td></tr><tr><td>vMaxHeight</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최대 높이값을 pixel 단위의 숫자로 설정합니다.\n\nvMinHeight 보다 작은 값을 설정하면 vMinHeight 값으로 설정됩니다.</div></td></tr><tr><td colspan=\"3\"><div>var objComp = new Calendar();\n\nobjComp.init( \"Calendar00\", 30, 120, 196, 46 );\nobjComp.init( \"Calendar00\", 30, 120, 196, 46, null, null );\nobjComp.init( \"Calendar00\", null, null, 300, \"400px\", \"80%\", 300 );\nobjComp.init( \"Calendar00\", 0, 0, 200, 100, null, null, 300, 500, 200, 500 );\nobjComp.init( \"Calendar00\", \"Calendar22:10\", 300, null, null, \"Calendar33:10\", \"20%\", 300, 500, 200, 500 );</div></td></tr></tbody></table>",
+      "content": "<table><caption></caption><thead><tr><th>Parameters</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>strName</td><td>String</td><td><div>Calendar 의 ID를 문자열로 설정합니다.</div></td></tr><tr><td>vLeft</td><td>String, Number</td><td><div>Calendar 의 left 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 right 속성값을 기준으로 Calendar 의 left 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 left 가 결정됩니다.</div></td></tr><tr><td>vTop</td><td>String, Number</td><td><div>Calendar 의 top 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 bottom 속성값을 기준으로 Calendar 의 top 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 top 이 결정됩니다.</div></td></tr><tr><td>vWidth</td><td>String, Number</td><td><div>Calendar 의 width 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Calendar 의 width 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 width 가 결정됩니다.</div></td></tr><tr><td>vHeight</td><td>String, Number</td><td><div>Calendar 의 height 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Calendar 의 height 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 height 가 결정됩니다.</div></td></tr><tr><td>vRight</td><td>String, Number</td><td><div>Calendar 의 right 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvLeft, vWidth 값을 모두 설정했을 경우 vRight 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 left 속성값을 기준으로 Calendar 의 right 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 right 가 결정됩니다.</div></td></tr><tr><td>vBottom</td><td>String, Number</td><td><div>Calendar 의 bottom 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvTop, vHeight 값을 모두 설정했을 경우 vBottom 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 top 속성값을 기준으로 Calendar 의 bottom 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 bottom 이 결정됩니다.</div></td></tr><tr><td>vMinWidth</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최소 너비값을 pixel 단위의 숫자로 설정합니다.</div></td></tr><tr><td>vMaxWidth</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최대 너비값을 pixel 단위의 숫자로 설정합니다.\n\nvMinWidth 보다 작은 값을 설정하면 vMinWidth 값으로 설정됩니다.</div></td></tr><tr><td>vMinHeight</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최소 높이값을 pixel 단위의 숫자로 설정합니다.</div></td></tr><tr><td>vMaxHeight</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최대 높이값을 pixel 단위의 숫자로 설정합니다.\n\nvMinHeight 보다 작은 값을 설정하면 vMinHeight 값으로 설정됩니다.</div></td></tr><tr><td class=\"code_cell\" colspan=\"3\"><div>var objComp = new Calendar();\n\nobjComp.init( \"Calendar00\", 30, 120, 196, 46 );\nobjComp.init( \"Calendar00\", 30, 120, 196, 46, null, null );\nobjComp.init( \"Calendar00\", null, null, 300, \"400px\", \"80%\", 300 );\nobjComp.init( \"Calendar00\", 0, 0, 200, 100, null, null, 300, 500, 200, 500 );\nobjComp.init( \"Calendar00\", \"Calendar22:10\", 300, null, null, \"Calendar33:10\", \"20%\", 300, 500, 200, 500 );</div></td></tr></tbody></table>",
       "option": {
         "table_layout": "user",
         "table_layout_setting": "120,120,?"
       }
     },
     {
-      "id": "u_10_0.14720864562433578",
+      "id": "u_10_0.5653611504005198",
       "type": "table",
-      "content": "<table><caption></caption><tbody><tr><td><div>// Create Object  \nvar objCalendar = new Calendar();  \nobjCalendar.init(\"Calendar\", 30, 120, 196, 46, null, null);\nobjCalendar.init(\"Calendar\", null, null, 300, \"400px\", \"80%\", 300);\nor\nvar objCalendar = new Calendar(\"Calendar\", 30, 120, 196, 46, null, null);\nvar objCalendar = new Calendar(\"Calendar\", null, null, 300, \"400px\", \"80%\", 300);\n \n// Add Object to Parent Form  \nthis.addChild(\"Calendar\", objCalendar); \n \n// Insert Object to Parent Form  \nthis.insertChild(1, \"Calendar\", objCalendar); \n \n// Remove Object form Parent Form  \nthis.removeChild(\"Calendar\"); \n \n// Show Object  \nobjCalendar.show(); \n \n// Destroy Object  \nobjCalendar.destroy(); \nobjCalendar = null;</div></td></tr></tbody></table>",
+      "content": "<table><caption></caption><tbody><tr><td class=\"code_cell\"><div>// Create Object  \nvar objCalendar = new Calendar();  \nobjCalendar.init(\"Calendar\", 30, 120, 196, 46, null, null);\nobjCalendar.init(\"Calendar\", null, null, 300, \"400px\", \"80%\", 300);\nor\nvar objCalendar = new Calendar(\"Calendar\", 30, 120, 196, 46, null, null);\nvar objCalendar = new Calendar(\"Calendar\", null, null, 300, \"400px\", \"80%\", 300);\n \n// Add Object to Parent Form  \nthis.addChild(\"Calendar\", objCalendar); \n \n// Insert Object to Parent Form  \nthis.insertChild(1, \"Calendar\", objCalendar); \n \n// Remove Object form Parent Form  \nthis.removeChild(\"Calendar\"); \n \n// Show Object  \nobjCalendar.show(); \n \n// Destroy Object  \nobjCalendar.destroy(); \nobjCalendar = null;</div></td></tr></tbody></table>",
       "option": {
         "table_layout": "user",
-        "table_layout_setting": "120,120,?"
+        "table_layout_setting": "100%"
       }
     }
   ]

@@ -10,7 +10,9 @@ html = response.text
 
 soup = BeautifulSoup(html, 'html.parser')
 
-# (공통 함수) Description, Remark, Contents Sizing 가져오기 
+# (공통 함수) 설명 텍스트 가져오기 
+# Object > Description
+# Object > Remark
 def get_desc_text(soup, title):
     desc_title_td = soup.find('td', class_='sub_title', string=title)
     if not desc_title_td:
@@ -25,14 +27,21 @@ def get_desc_text(soup, title):
     return desc_text
 
 # (공통 함수) 제목, 표 형식 가져오기 
+# Object > Contents Sizing
+# Object > Basic Key Action
+# Object > Accessibility Key Action
+# Object > Constructor
 def get_table_content(soup, title, layout, bTitle=None):
     content_title_td = soup.find('td', class_='sub_title', string=title)
     if not content_title_td:
         raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
 
-    content_tds = content_title_td.find_all_next('td', class_='list')
+    if title=="Constructor":
+        content_tds = content_title_td.find_next('td', class_='list').find_all_next('td', class_='list')
+    else:
+        content_tds = content_title_td.find_all_next('td', class_='list')
 
-    for content_td in content_tds:
+    for index, content_td in enumerate(content_tds):
         if (content_td.find_previous('td', class_='sub_title').get_text() != title):
             break
 
@@ -52,38 +61,67 @@ def get_table_content(soup, title, layout, bTitle=None):
             for colgroup in table_tag.find_all('colgroup'):
                 colgroup.decompose()
 
-            bTitleSkip = None
+            bTitleSkip = True
 
             if bTitle:
                 thead_tag = soup.new_tag('thead')
                 first_tr_tag = table_tag.find('tr')
                 first_tr_tag.wrap(thead_tag)
                 bTitleSkip = None
+                bTitle = None
 
                 for td_tag in first_tr_tag.find_all('td'):
                     th_tag = soup.new_tag('th')
                     th_tag.string = td_tag.string
+                    if td_tag.get('colspan'):
+                        th_tag['colspan'] = td_tag.get('colspan')
                     td_tag.replace_with(th_tag)
 
-            # tbody 태그 추가
             tbody_tag = soup.new_tag('tbody')
             caption_tag = soup.new_tag('caption')
+
             for tr_tag in table_tag.find_all('tr'):
                 if(bTitleSkip):
                     tr_tag.wrap(tbody_tag)
                 else:
                     bTitleSkip = True
+
             table_tag.insert(0, caption_tag)
 
             # 태그 사이의 공백과 줄바꿈 제거
             for pre_tag in table_tag.find_all('pre'):
                 pre_tag.string = pre_tag.text.strip()
+
+            for pre_tag in table_tag.find_all('pre'):
+                div_tag = soup.new_tag('div')
+                div_tag.string = pre_tag.string
+                pre_tag.replace_with(div_tag)
+
+            # Constructor 예외 - 특정 문자열 삭제, class 속성 추가
+            target_string = "Sample Call:<br/>"
+            if title == "Constructor":
+                for td_tag in table_tag.find_all('td'):
+                    if target_string in ''.join(map(str, td_tag.contents)):
+                        td_tag.contents[0].replace_with("")
+                        td_tag.contents[1].replace_with("")
+                        td_tag['class'] = "code_cell"
+
+                if index == 2:
+                    table_tag.find('td')['class'] = "code_cell"
+                    layout = "100%"
+
+            # div 태그를 제외한 나머지 결과물에서 줄바꿈(\n) 삭제
+            for element in table_tag.find_all(string=True):
+                if element.parent.name != "div":
+                    element.replace_with(element.replace("\n", ""))
+
             add_element("u_10_"+str(random.random()), "table", str(table_tag), get_table_option(layout))            
         else:
             print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다.")
 
 
 # (공통 함수) Structure 이미지 파일명 가져오기
+# Object > Structure
 def get_structure_img(soup):
     structure_title_td = soup.find('td', class_='sub_title', string='Structure')
     if not structure_title_td:
@@ -98,6 +136,7 @@ def get_structure_img(soup):
     return f"<img src='https://github.com/koko8829/chm_TEST/blob/main/2663%5C{structure_img}?raw=true'/>"
 
 # (공통 함수) Supported Environments 표 생성
+# Object > Supported Environments
 def get_support_table(soup):
     support_icon = []
     env_keywords = ["Windows", "macOS", "Edge", "Chrome", "Safari", "Firefox", "Opera", "Android", "iOS/iPadOS", "Android", "iOS/iPadOS"]
@@ -122,10 +161,12 @@ def get_support_table(soup):
 
     return "<table class='table column_count_7'><caption></caption><thead><tr><th colspan='2'><div>Desktop NRE</div></th><th colspan='5'><div>Desktop WRE</div></th></tr></thead><tbody><tr><td><div>"+support_icon[0]+" Windows</div></td><td><div>"+support_icon[1]+" macOS</div></td><td><div>"+support_icon[2]+" Edge</div></td><td><div>"+support_icon[3]+" Chrome</div></td><td><div>"+support_icon[4]+" Safari</div></td><td><div>"+support_icon[5]+" Firefox</div></td><td><div>"+support_icon[6]+" Opera</div></td></tr><tr><th colspan='2'><div>Mobile NRE</div></th><th colspan='5'><div>Mobile WRE</div></th></tr><tr><td><div>"+support_icon[7]+" Android</div></td><td><div>"+support_icon[8]+" iOS/iPadOS</div></td><td><div>"+support_icon[9]+" Android</div></td><td><div>"+support_icon[10]+" iOS/iPadOS</div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr></tbody></table>"
 
-# (공통 함수) Supported Environments 표 config
+# (공통 함수) 표 config
+# Object > Supported Environments (110,110,110,110,110,110,110)
 def get_table_option(layout="110,110,110,110,110,110,110"):
     return {
         "table_layout": "user",
+        "codeLanguage": "Javascript",
         "table_layout_setting": layout
     }
 
@@ -154,10 +195,14 @@ add_element("u_08", "heading2", "컴포넌트, 내부 컨텐츠 크기")
 get_table_content(soup, "Contents Sizing", "120,?")
 add_element("u_11", "heading2", "Basic Key Action")
 get_table_content(soup, "Basic Key Action", "120,120,?", True)
-add_element("u_11", "heading2", "Accessibility Key Action")
+add_element("u_12", "heading2", "Accessibility Key Action")
 get_table_content(soup, "Accessibility Key Action", "120,120,?", True)
-add_element("u_11", "heading2", "Constructor")
+add_element("u_13", "heading2", "Constructor")
 get_table_content(soup, "Constructor", "120,120,?", True)
+add_element("u_14", "heading2", "Status")
+get_table_content(soup, "Status", "120,120,?", True)
+add_element("u_15", "heading2", "Control")
+get_table_content(soup, "Control", "120,120,?", True)
 
 data = {
     "elements": elements

@@ -46,12 +46,12 @@
       "content": "컴포넌트, 내부 컨텐츠 크기"
     },
     {
-      "id": "u_09_0.7489110034953289",
+      "id": "u_09_0.02719750025300882",
       "type": "pre",
       "content": "Calendar 컴포넌트와 내부 컨텐츠 크기를 결정하는 기준입니다.\n\n- Calendar 컴포넌트의 type 속성값이 \"normal\" 일 경우 기준입니다."
     },
     {
-      "id": "u_10_0.7721899992183814",
+      "id": "u_10_0.5927288280759865",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>calendaredit Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 에서 dropbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>dropbutton Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 Width 에서 dropbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>buttonsize 속성값이 적용됩니다.\nbuttonsize 속성값이 없으면 Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>datepicker Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 left 속성값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>Calendar 컴포넌트의 bottom 속성값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>popupsize 속성값의  값이 적용됩니다.\npopupsize 속성값이 없으면 220 으로 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>popupsize 속성값의  값이 적용됩니다.\npopupsize 속성값이 없으면 200 으로 적용됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -61,12 +61,12 @@
       }
     },
     {
-      "id": "u_09_0.8470628820474527",
+      "id": "u_09_0.05021635068687191",
       "type": "pre",
       "content": "- Calendar 컴포넌트의 type 속성값이 \"spin\" 일 경우 기준입니다."
     },
     {
-      "id": "u_10_0.18921553180580652",
+      "id": "u_10_0.3187030855190881",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>calendaredit Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 에서 spinupbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>spinupbutton Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 Width 에서 spinupbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>buttonsize 속성값이 적용됩니다.\nbuttonsize 속성값이 없으면 Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 를 2로 나눈 몫이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>spindownbutton Control</div></td></tr><tr><td>Left</td><td><div>Calendar 컴포넌트의 Width 에서 spinupbutton 컨트롤의 Width 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>Calendar 컴포넌트의 Height 에서 spinupbutton 컨트롤의 Height 를 뺀 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>buttonsize 속성값이 적용됩니다.\nbuttonsize 속성값이 없으면 Calendar 컴포넌트의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 를 2로 나눈 몫이 적용됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -76,12 +76,12 @@
       }
     },
     {
-      "id": "u_09_0.7458628278589856",
+      "id": "u_09_0.06500227940329373",
       "type": "pre",
       "content": "- Calendar 컴포넌트의 type 속성값이 \"monthonly\" 일 경우 기준입니다."
     },
     {
-      "id": "u_10_0.31633927252191174",
+      "id": "u_10_0.015052368655482096",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>head Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 가 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>headheight 속성값이 적용됩니다.\nheadheight 속성값이 없으면 Calendar 컴포넌트의 Height 를 8 로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>prevbutton Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>nextbutton Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다. (오른쪽으로 정렬합니다.)</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>head 컨트롤의 Height 가 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>yearstatic Control</div></td></tr><tr><td>Left</td><td><div>monthstatic 컨트롤의 Width 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>monthstatic 컨트롤의 Height 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>텍스트 길이에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>텍스트 크기에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>monthstatic Control</div></td></tr><tr><td>Left</td><td><div>yearstatic 컨트롤의 Width 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>yearstatic 컨트롤의 Height 와 합하여 head 컨트롤에 가운데 정렬되게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>텍스트 길이에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>텍스트 크기에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>body Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>head 컨트롤의 Height 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 Width 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 Height 에서 head 컨트롤의 Height 를 뺀 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>weekband Control</div></td></tr><tr><td>Left</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>body 컨트롤의 Width 가 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 body 컨트롤의 Height 를 7 로 나눈 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>weekitem Control</div></td></tr><tr><td>Left</td><td><div>아이템별로 요일에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>0 으로 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 weekband 컨트롤의 Width 를 7로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>weekband 컨트롤의 Height 값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>dayitem Control</div></td></tr><tr><td>Left</td><td><div>아이템별로 요일에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>아이템별로 주에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 weekband 컨트롤의 Width 를 7로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 body 컨트롤의 Height 를 7 로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Height 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -91,12 +91,12 @@
       }
     },
     {
-      "id": "u_09_0.7837983438019782",
+      "id": "u_09_0.718647903863758",
       "type": "pre",
       "content": "- Calendar 컴포넌트의 datepickerchangetype 속성값이 \"button\"(또는 \"normal\"이고 Mobile 환경에서 실행)인 경우 기준입니다."
     },
     {
-      "id": "u_10_0.6827780443645988",
+      "id": "u_10_0.7869015404889798",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td colspan=\"2\"><div>Calendar Component</div></td></tr><tr><td>Width</td><td><div>Calendar 컴포넌트의 width 속성값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>Calendar 컴포넌트의 height 속성값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>DatePickerHeadControl</div></td></tr><tr><td>Left</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>popupsize로 지정한 Width 값이 적용됩니다. \n해당 값 미설정 시 calendarpopup 컨트롤 Width 와 동일한 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>popupsize로 지정한 Height 값이 적용됩니다.\n해당 값 미설정 시 Calendar 컴포넌트의 headheight 속성 값이 적용됩니다. 해당 값 미설정 시 기본 값(27.5px)이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>DatePickerBodyControl</div></td></tr><tr><td>Left</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값이 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>calendarpopup 컨트롤 위치에 맞게 계산된 값에 DatePickerHeadControl의 height를 추가한 값이 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>popupsize로 지정한 Width 값이 적용됩니다. \n해당 값 미설정 시 calendarpopup 컨트롤 Width 와 동일한 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>popupsize로 지정한 Height 값이 적용됩니다.\n해당 값 미설정 시 calendarpopup에서 DatePickerHeadControl의 height를 제외한 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>dayitem</div></td></tr><tr><td>Left</td><td><div>아이템별로 요일에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>아이템별로 주에 맞게 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 weekband 컨트롤의 Width 를 7로 나눈 값이 적용됩니다.\n내부 컨텐츠의 Width 보다 작을 경우 내부 컨텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td>Height</td><td><div>daysize 속성값의  값이 적용됩니다.\ndaysize 속성값이 없으면 body 컨트롤의 Height 를 7 로 나눈 값이 적용됩니다.\n내부 콘텐츠의 Height 보다 작을 경우 내부 콘텐츠가 잘려서 표시됩니다.</div></td></tr><tr><td colspan=\"2\"><div>monthitem</div></td></tr><tr><td>Left</td><td><div>아이템별로 월에 맞게 4개 단위로 나누어 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>head 컨트롤의 Height와 weekband 컨트롤의 Height를 더한 값을 시작으로 \n아이템별로 월에 맞게 4개 단위로 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>body 컨트롤의 Width를 4로 나눈 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>body 컨트롤의 Height를 4로 나눈 값이 적용됩니다.</div></td></tr><tr><td colspan=\"2\"><div>yearitem</div></td></tr><tr><td>Left</td><td><div>아이템별로 년에 맞게 4개 단위로 나누어 계산되어 적용됩니다.</div></td></tr><tr><td>Top</td><td><div>head 컨트롤의 Height와 weekband 컨트롤의 Height를 더한 값을 시작으로 \n아이템별로 년에 맞게 4개 단위로 계산되어 적용됩니다.</div></td></tr><tr><td>Width</td><td><div>body 컨트롤의 Width를 4로 나눈 값이 적용됩니다.</div></td></tr><tr><td>Height</td><td><div>body 컨트롤의 Height를 4로 나눈 값이 적용됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -111,7 +111,7 @@
       "content": "Basic Key Action"
     },
     {
-      "id": "u_10_0.3573480072696775",
+      "id": "u_10_0.3197121956143055",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th>Action</th><th>Key</th><th>Description</th></tr></thead><tbody><tr><td>포커스 이동</td><td>Tab</td><td><div>Tab 이동 순서에 따라 다음 컴포넌트로 포커스가 이동합니다.</div></td></tr><tr><td>DatePicker 열기</td><td>Alt + 아래방향키 또는 Option + 아래방향키</td><td><div>type 속성값이 \"normal\" 일 때 팝업달력(DatePicker)이 표시됩니다.</div></td></tr><tr><td>DatePicker 닫기</td><td>ESC</td><td><div>type 속성값이 \"normal\" 일 때 열려있는 팝업달력(DatePicker)을 닫습니다.</div></td></tr><tr><td>날짜 변경</td><td>상하방향키</td><td><div>type 속성값이 \"spin\" 일 때 캐럿위치의 년/월/일 값을 변경합니다.\n\n년/월/일 이 가질 수 있는 최저/최고값에 도달하면 반대값(최저면 최고값, 최고면 최저값)으로 변경됩니다.</div></td></tr><tr><td>날짜 결정</td><td>Enter</td><td><div>type 속성값이 \"normal\" 또는 \"monthonly\" 일 때 팝업달력(DatePIcker)에 선택된 날짜를 value 속성에 반영합니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>상하좌우방향키</td><td><div>DatePicker 에서 날짜가 이동됩니다.\n선택된 날짜를 결정하려면 Enter 를 입력하여야 합니다.\n\n첫 날짜에서 상/좌 방향키 또는 마지막 날짜에서 하/우 방향키 입력 시 월이 전환됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 좌우방향키</td><td><div>DatePicker 의 월이 이동됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 상하방향키</td><td><div>DatePicker 의 연도가 이동됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -126,12 +126,12 @@
       "content": "Accessibility Key Action"
     },
     {
-      "id": "u_09_0.2796187222150497",
+      "id": "u_09_0.8105048583834782",
       "type": "pre",
       "content": "접근성 기능이 활성화 되어 있을 때 적용되는 키 액션입니다."
     },
     {
-      "id": "u_10_0.13984152756676604",
+      "id": "u_10_0.7446908533851927",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th>Action</th><th>Key</th><th>Description</th></tr></thead><tbody><tr><td>포커스 이동</td><td>Tab</td><td><div>Tab 이동 순서에 따라 다음 컴포넌트로 포커스가 이동합니다.</div></td></tr><tr><td>선택상자 이동</td><td>상하방향키</td><td><div>Tab Order 가 이전/다음인 컴포넌트로 선택상자가 이동합니다.\n\ntype 속성값이 \"normal\" 일 때 표시된 팝업달력(DatePicker) 에서는 아무런 액션도 발생하지 않습니다.</div></td></tr><tr><td>DatePicker 열기</td><td>Alt + 아래방향키 또는 Option + 아래방향키</td><td><div>type 속성값이 \"normal\" 일 때 팝업달력(DatePicker)이 표시됩니다.</div></td></tr><tr><td>DatePicker 닫기</td><td>ESC</td><td><div>type 속성값이 \"normal\" 일 때 열려있는 팝업달력(DatePicker)을 닫습니다.</div></td></tr><tr><td>날짜 변경</td><td>Ctrl + 상하방향키</td><td><div>type 속성값이 \"spin\" 일 때 캐럿위치의 년/월/일 값을 변경합니다.\n\n년/월/일 이 가질 수 있는 최저/최고값에 도달하면 반대값(최저면 최고값, 최고면 최저값)으로 변경됩니다.</div></td></tr><tr><td>날짜 결정</td><td>Enter</td><td><div>type 속성값이 \"normal\" 또는 \"monthonly\" 일 때 팝업달력(DatePIcker)에 선택된 날짜를 value 속성에 반영합니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>좌우방향키</td><td><div>DatePicker 에서 날짜가 이동됩니다.\n선택된 날짜를 결정하려면 Enter 를 입력하여야 합니다.\n\n첫 날짜에서 좌측방향키 또는 마지막 날짜에서 우측방향키 입력 시 월이 전환됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 좌우방향키</td><td><div>DatePicker 의 월이 이동됩니다.</div></td></tr><tr><td>DatePicker 날짜이동</td><td>Ctrl + 상하방향키</td><td><div>DatePicker 의 연도가 이동됩니다.</div></td></tr></tbody></table>",
       "option": {
@@ -146,12 +146,12 @@
       "content": "생성자"
     },
     {
-      "id": "u_09_0.06631987762046498",
+      "id": "u_09_0.8492039758056761",
       "type": "pre",
       "content": "Calendar.init( strName, vLeft, vTop , vWidth, vHeight [, vRight, vBottom, [vMinWidth, [vMaxWidth, [vMinHeight, [vMaxHeight]]]]] )"
     },
     {
-      "id": "u_10_0.16808925634292737",
+      "id": "u_10_0.3196051089772872",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th>Parameters</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>strName</td><td>String</td><td><div>Calendar 의 ID를 문자열로 설정합니다.</div></td></tr><tr><td>vLeft</td><td>String, Number</td><td><div>Calendar 의 left 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 right 속성값을 기준으로 Calendar 의 left 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 left 가 결정됩니다.</div></td></tr><tr><td>vTop</td><td>String, Number</td><td><div>Calendar 의 top 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 bottom 속성값을 기준으로 Calendar 의 top 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 top 이 결정됩니다.</div></td></tr><tr><td>vWidth</td><td>String, Number</td><td><div>Calendar 의 width 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Calendar 의 width 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 width 가 결정됩니다.</div></td></tr><tr><td>vHeight</td><td>String, Number</td><td><div>Calendar 의 height 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트값은 무시되고 pixel 값으로 Calendar 의 height 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 height 가 결정됩니다.</div></td></tr><tr><td>vRight</td><td>String, Number</td><td><div>Calendar 의 right 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvLeft, vWidth 값을 모두 설정했을 경우 vRight 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 left 속성값을 기준으로 Calendar 의 right 가 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 width 속성값을 기준으로 Calendar 의 right 가 결정됩니다.</div></td></tr><tr><td>vBottom</td><td>String, Number</td><td><div>Calendar 의 bottom 속성값을 pixel 또는 비율(\"%\") 단위의 숫자로 설정합니다.\n\nvTop, vHeight 값을 모두 설정했을 경우 vBottom 값은 무시됩니다.\n\n* 값에 기준 컴포넌트를 포함하여 설정했을 때 :\npixel 단위로 설정 시 기준 컴포넌트의 top 속성값을 기준으로 Calendar 의 bottom 이 결정됩니다.\n비율(\"%\") 단위로 설정 시 기준 컴포넌트의 height 속성값을 기준으로 Calendar 의 bottom 이 결정됩니다.</div></td></tr><tr><td>vMinWidth</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최소 너비값을 pixel 단위의 숫자로 설정합니다.</div></td></tr><tr><td>vMaxWidth</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최대 너비값을 pixel 단위의 숫자로 설정합니다.\n\nvMinWidth 보다 작은 값을 설정하면 vMinWidth 값으로 설정됩니다.</div></td></tr><tr><td>vMinHeight</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최소 높이값을 pixel 단위의 숫자로 설정합니다.</div></td></tr><tr><td>vMaxHeight</td><td>String, Number</td><td><div>Calendar 이(가) 화면에 표시되는 최대 높이값을 pixel 단위의 숫자로 설정합니다.\n\nvMinHeight 보다 작은 값을 설정하면 vMinHeight 값으로 설정됩니다.</div></td></tr><tr><td class=\"code_cell\" colspan=\"3\"><div>var objComp = new Calendar();\n\nobjComp.init( \"Calendar00\", 30, 120, 196, 46 );\nobjComp.init( \"Calendar00\", 30, 120, 196, 46, null, null );\nobjComp.init( \"Calendar00\", null, null, 300, \"400px\", \"80%\", 300 );\nobjComp.init( \"Calendar00\", 0, 0, 200, 100, null, null, 300, 500, 200, 500 );\nobjComp.init( \"Calendar00\", \"Calendar22:10\", 300, null, null, \"Calendar33:10\", \"20%\", 300, 500, 200, 500 );</div></td></tr></tbody></table>",
       "option": {
@@ -161,7 +161,7 @@
       }
     },
     {
-      "id": "u_10_0.6905010871925759",
+      "id": "u_10_0.5086655086557097",
       "type": "table",
       "content": "<table><caption></caption><tbody><tr><td class=\"code_cell\"><div>// Create Object  \nvar objCalendar = new Calendar();  \nobjCalendar.init(\"Calendar\", 30, 120, 196, 46, null, null);\nobjCalendar.init(\"Calendar\", null, null, 300, \"400px\", \"80%\", 300);\nor\nvar objCalendar = new Calendar(\"Calendar\", 30, 120, 196, 46, null, null);\nvar objCalendar = new Calendar(\"Calendar\", null, null, 300, \"400px\", \"80%\", 300);\n \n// Add Object to Parent Form  \nthis.addChild(\"Calendar\", objCalendar); \n \n// Insert Object to Parent Form  \nthis.insertChild(1, \"Calendar\", objCalendar); \n \n// Remove Object form Parent Form  \nthis.removeChild(\"Calendar\"); \n \n// Show Object  \nobjCalendar.show(); \n \n// Destroy Object  \nobjCalendar.destroy(); \nobjCalendar = null;</div></td></tr></tbody></table>",
       "option": {
@@ -176,7 +176,7 @@
       "content": "Status"
     },
     {
-      "id": "u_10_0.5446074815970131",
+      "id": "u_10_0.4665736280334559",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>disabled</td><td>status</td><td><div>컴포넌트가 비활성화된 상태</div></td></tr><tr><td>invalidtext</td><td>userstatus</td><td><div>유효하지 않은 값이 바인드 되거나 설정된 상태</div></td></tr><tr><td>readonly</td><td>status</td><td><div>컴포넌트가 읽기 전용인 상태</div></td></tr><tr><td>mouseover</td><td>status</td><td><div>마우스 커서가 컴포넌트 또는 컴포넌트의 특정 아이템 위에 있는 상태</div></td></tr><tr><td>focused</td><td>status</td><td><div>컴포넌트가 포커스를 받은 상태</div></td></tr><tr><td>enabled</td><td>status</td><td><div>컴포넌트가 활성화된 상태</div></td></tr></tbody></table>",
       "option": {
@@ -191,7 +191,7 @@
       "content": "Control"
     },
     {
-      "id": "u_10_0.1662821066526171",
+      "id": "u_10_0.43694036846488227",
       "type": "table",
       "content": "<table><caption></caption><thead><tr><th colspan=\"2\">Name</th><th>TypeName</th></tr></thead><tbody><tr><td colspan=\"2\">dropbutton</td><td>nexacro.Button</td></tr><tr><td colspan=\"2\">calendarspinupbutton</td><td>nexacro.Button</td></tr><tr><td colspan=\"2\">calendarspindownbutton</td><td>nexacro.Button</td></tr><tr><td colspan=\"2\">datepicker</td><td>nexacro.DatePickerControl</td></tr><tr><td colspan=\"2\">calendaredit</td><td>nexacro.MaskEdit</td></tr></tbody></table>",
       "option": {
@@ -403,7 +403,7 @@
     {
       "id": "p_08_accessibilityenable",
       "type": "pre",
-      "content": "- accessibilityenable 속성값을 설정하지 않으면 true 로 적용됩니다.\n\n- enableaccessibility 속성값이 true 인 경우만 적용되는 속성입니다.\n\n- 선택상자 이동 시 컴포넌트의 ARIA-LABEL + Text + Status + Role 순서로 정보가 조합되어 접근성으로 출력됩니다.\n   각 정보의 조합순서는 스크린 리더의 종류에 따라 달라질 수 있습니다.\n   > ARIA-LABEL : Environment 의 accessbilitydescreadtype 속성에 설정된 속성값이 반영됩니다.\n   > Text : Calendar 의 text 속성값이 반영됩니다.\n   > Status : Calendar 가 편집가능상태인지 여부가 반영됩니다.\n   > Role : accessibilityrole 속성값이 반영됩니다. accessibilityrole 속성값을 설정하지 않으면 Calendar 의 고유 Role 이 반영됩니다.\n               센스리더는 Calendar 의 고유 Role 로 \"편집창\"을 출력합니다.\n\n- Calendar 의 type 속성값이 \"monthonly\" 이면 방향키로 이동 시 Calendar 를 거치지 않고 바로 DatePicker 로 선택상자가 이동합니다.\n\n- Datepicker 에서 날짜를 변경하면 변경된 날짜만 출력합니다.\n   Datepicker 에서 월 또는 연도를 변경하면 전체 날짜를 출력합니다.\n\n- accessibilityenable 속성값이 false 일 때 데스크탑 환경에서 방향키 외의 방법으로 선택상자를 Calendar 로 이동시키면 스크린 리딩 프로그램에서 임의의 값을 출력할 수 있습니다.\n\n\n◆ Mobile 제약\n\n- 모바일 환경에서는 Div 와 같은 컨테이너 컴포넌트 자체에 선택상자가 이동하지 않습니다."
+      "content": "- accessibilityenable 속성값을 설정하지 않으면 true 로 적용됩니다.\n\n- enableaccessibility 속성값이 true 인 경우만 적용되는 속성입니다.\n\n- 선택상자 이동 시 컴포넌트의 ARIA-LABEL + Text + Status + Role 순서로 정보가 조합되어 접근성으로 출력됩니다.\n   각 정보의 조합순서는 스크린 리더의 종류에 따라 달라질 수 있습니다.\n   &gt; ARIA-LABEL : Environment 의 accessbilitydescreadtype 속성에 설정된 속성값이 반영됩니다.\n   &gt; Text : Calendar 의 text 속성값이 반영됩니다.\n   &gt; Status : Calendar 가 편집가능상태인지 여부가 반영됩니다.\n   &gt; Role : accessibilityrole 속성값이 반영됩니다. accessibilityrole 속성값을 설정하지 않으면 Calendar 의 고유 Role 이 반영됩니다.\n               센스리더는 Calendar 의 고유 Role 로 \"편집창\"을 출력합니다.\n\n- Calendar 의 type 속성값이 \"monthonly\" 이면 방향키로 이동 시 Calendar 를 거치지 않고 바로 DatePicker 로 선택상자가 이동합니다.\n\n- Datepicker 에서 날짜를 변경하면 변경된 날짜만 출력합니다.\n   Datepicker 에서 월 또는 연도를 변경하면 전체 날짜를 출력합니다.\n\n- accessibilityenable 속성값이 false 일 때 데스크탑 환경에서 방향키 외의 방법으로 선택상자를 Calendar 로 이동시키면 스크린 리딩 프로그램에서 임의의 값을 출력할 수 있습니다.\n\n\n◆ Mobile 제약\n\n- 모바일 환경에서는 Div 와 같은 컨테이너 컴포넌트 자체에 선택상자가 이동하지 않습니다."
     },
     {
       "id": "p_01_accessibilitylabel",
@@ -653,7 +653,7 @@
     {
       "id": "p_08_background",
       "type": "pre",
-      "content": "- background 속성값을 설정하지 않으면 undefined 가 설정되고, \"transparent\" 로 동작합니다.\n\n- TypeDefinition 영역의 Services 에 정의된 사용자 Prefix 는 테마 또는 XCSS 에서 이미지경로로 사용할 수 없습니다.\n   사용자 Prefix 는 스크립트 또는 넥사크로 스튜디오에서 속성값으로 설정 시 사용할 수 있습니다.\n\n- 배경의 기준영역과 표시영역은 <background-origin>, <background-clip> 값으로 각각 설정합니다.\n\n- 배경 이미지를 중앙에 위치시키려면 <position> 값을 \"center\" 또는 \"center center\" 로 설정하여야 합니다.\n\n- 배경이미지와 배경색을 모두 설정하면 배경색 위에 이미지가 표시됩니다.\n   그라데이션과 배경색을 모두 설정하면 배경색 위에 그라데이션이 표시됩니다.\n\n- 그라데이션과 배경이미지를 동시에 설정할 수 없습니다.\n   두 값을 동시에 설정 시 오동작이 발생할 수 있습니다."
+      "content": "- background 속성값을 설정하지 않으면 undefined 가 설정되고, \"transparent\" 로 동작합니다.\n\n- TypeDefinition 영역의 Services 에 정의된 사용자 Prefix 는 테마 또는 XCSS 에서 이미지경로로 사용할 수 없습니다.\n   사용자 Prefix 는 스크립트 또는 넥사크로 스튜디오에서 속성값으로 설정 시 사용할 수 있습니다.\n\n- 배경의 기준영역과 표시영역은 &lt;background-origin&gt;, &lt;background-clip&gt; 값으로 각각 설정합니다.\n\n- 배경 이미지를 중앙에 위치시키려면 &lt;position&gt; 값을 \"center\" 또는 \"center center\" 로 설정하여야 합니다.\n\n- 배경이미지와 배경색을 모두 설정하면 배경색 위에 이미지가 표시됩니다.\n   그라데이션과 배경색을 모두 설정하면 배경색 위에 그라데이션이 표시됩니다.\n\n- 그라데이션과 배경이미지를 동시에 설정할 수 없습니다.\n   두 값을 동시에 설정 시 오동작이 발생할 수 있습니다."
     },
     {
       "id": "p_01_backgroundcolumn",
@@ -803,7 +803,7 @@
     {
       "id": "p_08_border-radius",
       "type": "pre",
-      "content": "- border-radius 속성값을 설정하지 않으면 undefined 가 설정되고, \"0px\" 로 동작합니다. \n\n- 스크립트로 접근 시 속성명은 \"borderRadius\" 를 사용해야 합니다.\n\n- <horizontal-radius>와 <vertical-radius>는 \"/\" 문자로 구분하여 입력합니다.\n\n- Calendar, Combo 와 같이 하위 컨트롤이 존재하는 컴포넌트는 하위컨트롤에도 border-radius 속성을 설정해야 정상적으로 모서리가 표시됩니다.\n\n\n◆ NRE 제약\n\n- border-radius 속성을 설정하면 모든 테두리가 같은 색으로 적용됩니다.\n   -nexa-border 속성에서 top 에 적용된 색이 모든 테두리에 적용됩니다."
+      "content": "- border-radius 속성값을 설정하지 않으면 undefined 가 설정되고, \"0px\" 로 동작합니다. \n\n- 스크립트로 접근 시 속성명은 \"borderRadius\" 를 사용해야 합니다.\n\n- &lt;horizontal-radius&gt;와 &lt;vertical-radius&gt;는 \"/\" 문자로 구분하여 입력합니다.\n\n- Calendar, Combo 와 같이 하위 컨트롤이 존재하는 컴포넌트는 하위컨트롤에도 border-radius 속성을 설정해야 정상적으로 모서리가 표시됩니다.\n\n\n◆ NRE 제약\n\n- border-radius 속성을 설정하면 모든 테두리가 같은 색으로 적용됩니다.\n   -nexa-border 속성에서 top 에 적용된 색이 모든 테두리에 적용됩니다."
     },
     {
       "id": "p_01_bottom",
@@ -853,7 +853,7 @@
     {
       "id": "p_08_bottom",
       "type": "pre",
-      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(<strCompID>)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(<strCompID>)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(<nVal>)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
+      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(&lt;strCompID&gt;)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(&lt;strCompID&gt;)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(&lt;nVal&gt;)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
     },
     {
       "id": "p_01_box-shadow",
@@ -903,7 +903,7 @@
     {
       "id": "p_08_box-shadow",
       "type": "pre",
-      "content": "- box-shadow 속성값을 설정하지 않으면 undefined 가 설정되고, \"none\" 으로 동작합니다.\n\n- 스크립트로 접근 시 속성명은 \"boxShadow\" 를 사용해야 합니다.\n\n- <blur> 값을 크게 설정하면 시스템 자원 요구량이 많아져 성능 저하의 원인이 됩니다.\n\n- <inset>, <spread> 값은 NRE를 지원하지 않습니다. \n  넥사크로 스튜디오 디자인 창에서도 속성값 설정 시 변경된 디자인을 확인할 수 없습니다.\n\n\n◆ web runtime environment 제약\n\n- XCSS 를 사용하지 않고 rgba(), hsl(), hsla() 메소드를 속성에 직접 설정할 경우 브라우저 버전에 따라 적용되지 않을 수 있습니다."
+      "content": "- box-shadow 속성값을 설정하지 않으면 undefined 가 설정되고, \"none\" 으로 동작합니다.\n\n- 스크립트로 접근 시 속성명은 \"boxShadow\" 를 사용해야 합니다.\n\n- &lt;blur&gt; 값을 크게 설정하면 시스템 자원 요구량이 많아져 성능 저하의 원인이 됩니다.\n\n- &lt;inset&gt;, &lt;spread&gt; 값은 NRE를 지원하지 않습니다. \n  넥사크로 스튜디오 디자인 창에서도 속성값 설정 시 변경된 디자인을 확인할 수 없습니다.\n\n\n◆ web runtime environment 제약\n\n- XCSS 를 사용하지 않고 rgba(), hsl(), hsla() 메소드를 속성에 직접 설정할 경우 브라우저 버전에 따라 적용되지 않을 수 있습니다."
     },
     {
       "id": "p_01_buttonsize",
@@ -953,7 +953,7 @@
     {
       "id": "p_08_buttonsize",
       "type": "pre",
-      "content": "- buttonsize 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n  undefined 설정 시 Calendar 의 height 속성값이 적용됩니다.\n\n- type 속성값이 \"normal\" 또는 \"spin\" 일 때 적용되는 속성입니다.\n\n- <strWidth> 값과 <strHeight> 값은 공백문자로 구분하여 문자열로 설정합니다.\n\n- <strWidth> 값이 Calendar 의 width 속성값보다 클 경우 Calendar 의 너비에 맞게 버튼이 표시됩니다."
+      "content": "- buttonsize 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n  undefined 설정 시 Calendar 의 height 속성값이 적용됩니다.\n\n- type 속성값이 \"normal\" 또는 \"spin\" 일 때 적용되는 속성입니다.\n\n- &lt;strWidth&gt; 값과 &lt;strHeight&gt; 값은 공백문자로 구분하여 문자열로 설정합니다.\n\n- &lt;strWidth&gt; 값이 Calendar 의 width 속성값보다 클 경우 Calendar 의 너비에 맞게 버튼이 표시됩니다."
     },
     {
       "id": "p_01_calendaredit",
@@ -1503,7 +1503,7 @@
     {
       "id": "p_08_daysize",
       "type": "pre",
-      "content": "- daysize 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n  undefined 를 설정하면 팝업달력(DatePicker) body 영역의 너비와 높이를 7로 나눈 값이 날짜영역의 너비와 높이로 각각 적용됩니다.\n\n- <strWidth> 값과 <strHeight> 값은 공백문자로 구분하여 문자열로 설정합니다.\n\n- type 속성값이 \"normal\"인 경우 버튼 클릭 시 표시되는 팝업달력(DatePicker)의 날짜영역 크기를 설정합니다."
+      "content": "- daysize 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n  undefined 를 설정하면 팝업달력(DatePicker) body 영역의 너비와 높이를 7로 나눈 값이 날짜영역의 너비와 높이로 각각 적용됩니다.\n\n- &lt;strWidth&gt; 값과 &lt;strHeight&gt; 값은 공백문자로 구분하여 문자열로 설정합니다.\n\n- type 속성값이 \"normal\"인 경우 버튼 클릭 시 표시되는 팝업달력(DatePicker)의 날짜영역 크기를 설정합니다."
     },
     {
       "id": "p_01_displayinvalidtext",
@@ -2003,7 +2003,7 @@
     {
       "id": "p_08_font",
       "type": "pre",
-      "content": "- font 속성값을 설정하지 않으면 undefined 가 설정되고, \"12pt/normal Verdana\" 로 동작합니다.\n\n- font 속성의 폰트 크기가 변경되면 <line-height> 에 적용된 값에 따라 줄간격이 변경될 수 있습니다.\n\n- <font-weight> 를 수치로 설정 시 \"400\" 값이 일반적인 굵기로 적용되고, \"700\" 값이 \"bold\" 로 적용됩니다.\n   폰트에 수치값에 해당하는 폰트굵기가 없다면 \"400\" 과 \"700\" 중 가까운 값으로 표시됩니다.\n\n- UserFont 사용 시 환경별로 지원하는 포맷정보는 \"Appendix > Supported UserFont\" 항목을 참고하세요.\n\n\n◆ WRE 제약\n\n- -nexa-text-align 속성값이 \"right\" 일 때 font 속성에 \"italic\" 을 설정하면 마지막 텍스트의 기울어진 부분이 잘려서 표시될 수 있습니다.\n   웹브라우저에서 텍스트영역을 일반글자 기준으로 처리한 후 기울임을 적용하면서 발생하는 문제입니다."
+      "content": "- font 속성값을 설정하지 않으면 undefined 가 설정되고, \"12pt/normal Verdana\" 로 동작합니다.\n\n- font 속성의 폰트 크기가 변경되면 &lt;line-height&gt; 에 적용된 값에 따라 줄간격이 변경될 수 있습니다.\n\n- &lt;font-weight&gt; 를 수치로 설정 시 \"400\" 값이 일반적인 굵기로 적용되고, \"700\" 값이 \"bold\" 로 적용됩니다.\n   폰트에 수치값에 해당하는 폰트굵기가 없다면 \"400\" 과 \"700\" 중 가까운 값으로 표시됩니다.\n\n- UserFont 사용 시 환경별로 지원하는 포맷정보는 \"Appendix &gt; Supported UserFont\" 항목을 참고하세요.\n\n\n◆ WRE 제약\n\n- -nexa-text-align 속성값이 \"right\" 일 때 font 속성에 \"italic\" 을 설정하면 마지막 텍스트의 기울어진 부분이 잘려서 표시될 수 있습니다.\n   웹브라우저에서 텍스트영역을 일반글자 기준으로 처리한 후 기울임을 적용하면서 발생하는 문제입니다."
     },
     {
       "id": "p_01_headformat",
@@ -2153,7 +2153,7 @@
     {
       "id": "p_08_height",
       "type": "pre",
-      "content": "- 높이값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 높이값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(<strCompID>)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(<strCompID>)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(<nVal>)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
+      "content": "- 높이값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 높이값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(&lt;strCompID&gt;)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(&lt;strCompID&gt;)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(&lt;nVal&gt;)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
     },
     {
       "id": "p_01_hotkey",
@@ -2353,7 +2353,7 @@
     {
       "id": "p_08_innerdataset",
       "type": "pre",
-      "content": "- DataSet 에는 datecolumn, backgroundcolumn, bordercolumn, textcolorcolumn 속성에 설정할 수 있는 Column 이 있어야 합니다.\n   > datecolumn           : 특정날짜의 데이터가 있는 Column을 설정합니다.\n   > backgroundcolumn : 특정날짜의 배경색 데이터가 있는 Column을 설정합니다.\n   > bordercolumn        : 특정날짜의 테두리 데이터가 있는 Column을 설정합니다.\n   > textcolorcolumn      : 특정날짜의 날짜색 데이터가 있는 Column을 설정합니다.\n\n- innerdataset 속성은 bind 구문을 사용하여 설정할 수 없습니다."
+      "content": "- DataSet 에는 datecolumn, backgroundcolumn, bordercolumn, textcolorcolumn 속성에 설정할 수 있는 Column 이 있어야 합니다.\n   &gt; datecolumn           : 특정날짜의 데이터가 있는 Column을 설정합니다.\n   &gt; backgroundcolumn : 특정날짜의 배경색 데이터가 있는 Column을 설정합니다.\n   &gt; bordercolumn        : 특정날짜의 테두리 데이터가 있는 Column을 설정합니다.\n   &gt; textcolorcolumn      : 특정날짜의 날짜색 데이터가 있는 Column을 설정합니다.\n\n- innerdataset 속성은 bind 구문을 사용하여 설정할 수 없습니다."
     },
     {
       "id": "p_01_layoutorder",
@@ -2453,7 +2453,7 @@
     {
       "id": "p_08_left",
       "type": "pre",
-      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(<strCompID>)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(<strCompID>)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(<nVal>)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
+      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(&lt;strCompID&gt;)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(&lt;strCompID&gt;)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(&lt;nVal&gt;)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
     },
     {
       "id": "p_01_letter-spacing",
@@ -2553,7 +2553,7 @@
     {
       "id": "p_08_locale",
       "type": "pre",
-      "content": "- ISO 639-1에서 정의하고 있는 2-알파벳 언어 코드와 ISO 3166-1에서 정의하고 있는 2-알파벳 국가 코드를 조합하여 사용합니다.\n\n- 국가 및 언어 코드는 \"Appendix > Locale Code List\" 항목을 참고하세요."
+      "content": "- ISO 639-1에서 정의하고 있는 2-알파벳 언어 코드와 ISO 3166-1에서 정의하고 있는 2-알파벳 국가 코드를 조합하여 사용합니다.\n\n- 국가 및 언어 코드는 \"Appendix &gt; Locale Code List\" 항목을 참고하세요."
     },
     {
       "id": "p_01_maxheight",
@@ -2603,7 +2603,7 @@
     {
       "id": "p_08_maxheight",
       "type": "pre",
-      "content": "- height 속성값이 maxheight 보다 크면 화면에 표시되는 Calendar 의 높이는 maxheight 속성값으로 적용됩니다.\n  표시되는 높이만 적용되고 height 속성값은 변경되지 않습니다.\n\n- maxheight 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- maxheight 속성값을 minheight 속성값보다 작게 설정하면 minheight 속성값이 maxheight 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 높이가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   maxheight > height > top(상대값) > bottom(상대값) > top(절대값) > bottom(절대값) 순서로 설정값이 적용됩니다.\n   이 때, height, top, bottom 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 높이가 자동 설정될 때도 적용되는 속성입니다."
+      "content": "- height 속성값이 maxheight 보다 크면 화면에 표시되는 Calendar 의 높이는 maxheight 속성값으로 적용됩니다.\n  표시되는 높이만 적용되고 height 속성값은 변경되지 않습니다.\n\n- maxheight 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- maxheight 속성값을 minheight 속성값보다 작게 설정하면 minheight 속성값이 maxheight 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 높이가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   maxheight &gt; height &gt; top(상대값) &gt; bottom(상대값) &gt; top(절대값) &gt; bottom(절대값) 순서로 설정값이 적용됩니다.\n   이 때, height, top, bottom 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 높이가 자동 설정될 때도 적용되는 속성입니다."
     },
     {
       "id": "p_01_maxwidth",
@@ -2653,7 +2653,7 @@
     {
       "id": "p_08_maxwidth",
       "type": "pre",
-      "content": "- width 속성값이 maxwidth 보다 크면 화면에 표시되는 Calendar 의 너비는 maxwidth 속성값으로 적용됩니다.\n  표시되는 너비만 적용되고 width 속성값은 변경되지 않습니다.\n\n- maxwidth 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- maxwidth 속성값을 minwidth 속성값보다 작게 설정하면 minwidth 속성값이 maxwidth 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 너비가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   maxwidth > width > left(상대값) > right(상대값) > left(절대값) > right(절대값) 순서로 설정값이 적용됩니다.\n   이 때, width, left, right 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 너비가 자동 설정될 때도 적용되는 속성입니다."
+      "content": "- width 속성값이 maxwidth 보다 크면 화면에 표시되는 Calendar 의 너비는 maxwidth 속성값으로 적용됩니다.\n  표시되는 너비만 적용되고 width 속성값은 변경되지 않습니다.\n\n- maxwidth 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- maxwidth 속성값을 minwidth 속성값보다 작게 설정하면 minwidth 속성값이 maxwidth 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 너비가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   maxwidth &gt; width &gt; left(상대값) &gt; right(상대값) &gt; left(절대값) &gt; right(절대값) 순서로 설정값이 적용됩니다.\n   이 때, width, left, right 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 너비가 자동 설정될 때도 적용되는 속성입니다."
     },
     {
       "id": "p_01_minheight",
@@ -2703,7 +2703,7 @@
     {
       "id": "p_08_minheight",
       "type": "pre",
-      "content": "- height 속성값이 minheight 보다 작다면 화면에 표시되는 Calendar 의 높이는 minheight 속성값으로 적용됩니다.\n  표시되는 높이만 적용되고 height 속성값은 변경되지 않습니다.\n\n- minheight 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- minheight 속성값을 maxheight 속성값보다 크게 설정하면 maxheight 속성값이 minheight 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 높이가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   minheight > height > top(상대값) > bottom(상대값) > top(절대값) > bottom(절대값) 순서로 설정값이 적용됩니다.\n   이 때, height, top, bottom 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 높이가 자동 설정될 때도 적용되는 속성입니다."
+      "content": "- height 속성값이 minheight 보다 작다면 화면에 표시되는 Calendar 의 높이는 minheight 속성값으로 적용됩니다.\n  표시되는 높이만 적용되고 height 속성값은 변경되지 않습니다.\n\n- minheight 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- minheight 속성값을 maxheight 속성값보다 크게 설정하면 maxheight 속성값이 minheight 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 높이가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   minheight &gt; height &gt; top(상대값) &gt; bottom(상대값) &gt; top(절대값) &gt; bottom(절대값) 순서로 설정값이 적용됩니다.\n   이 때, height, top, bottom 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 높이가 자동 설정될 때도 적용되는 속성입니다."
     },
     {
       "id": "p_01_minwidth",
@@ -2753,7 +2753,7 @@
     {
       "id": "p_08_minwidth",
       "type": "pre",
-      "content": "- width 속성값이 minwidth 보다 작으면 화면에 표시되는 Calendar 의 너비는 minwidth 속성값으로 적용됩니다.\n  표시되는 너비만 적용되고 width 속성값은 변경되지 않습니다.\n\n- minwidth 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- minwidth 속성값을 maxwidth 속성값보다 크게 설정하면 maxwidth 속성값이 minwidth 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 너비가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   minwidth > width > left(상대값) > right(상대값) > left(절대값) > right(절대값) 순서로 설정값이 적용됩니다.\n   이 때, width, left, right 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 너비가 자동 설정될 때도 적용되는 속성입니다."
+      "content": "- width 속성값이 minwidth 보다 작으면 화면에 표시되는 Calendar 의 너비는 minwidth 속성값으로 적용됩니다.\n  표시되는 너비만 적용되고 width 속성값은 변경되지 않습니다.\n\n- minwidth 속성값에 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n- minwidth 속성값을 maxwidth 속성값보다 크게 설정하면 maxwidth 속성값이 minwidth 속성값으로 설정됩니다.\n\n- Position 관련 속성(left, top 등)에 기준컴포넌트를 설정하여 Calendar 의 너비가 상대적으로 설정될 경우에도 적용되는 속성입니다.\n   minwidth &gt; width &gt; left(상대값) &gt; right(상대값) &gt; left(절대값) &gt; right(절대값) 순서로 설정값이 적용됩니다.\n   이 때, width, left, right 값 중 먼저 2개가 설정되면 나머지는 무시됩니다.\n\n- fittocontents 속성이 있는 컴포넌트는 속성값에 의해 너비가 자동 설정될 때도 적용되는 속성입니다."
     },
     {
       "id": "p_01_name",
@@ -2853,7 +2853,7 @@
     {
       "id": "p_08_-nexa-border",
       "type": "pre",
-      "content": "- -nexa-border 속성값을 설정하지 않으면 undefined 가 설정되고, \"medium none #999999\" 로 동작합니다.\n\n- <line-style> 이 \"double\" 일 때 두 줄을 다른 색으로 설정할 수 없습니다.\n   <color> 에 설정된 색이 두 줄에 모두 적용됩니다.\n\n- 스크립트로 접근 시 속성명은 \"border\"를 사용해야 합니다.\n\n\n◆ Nexacro Runtime Environment 제약\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 top > right > bottom > left 순으로 겹쳐서 표시됩니다.\n\n- <line-style> 에 \"double\",\"groove\",\"ridge\",\"inset\",\"outset\" 값을 설정해도 적용되지 않습니다.\n\n- <line-width> 에 \"thin\",\"medium\",\"thick\" 값을 설정해도 적용되지 않습니다.\n\n\n◆ Web Runtime Environment 제약\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 웹브라우저에 따라 테두리가 겹쳐지는 순서가 다르게 처리될 수 있습니다.\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 border-radius 속성값이 설정되어 있으면 \n   두께는 각 테두리 별로 따로 적용되고, 색상은 top 에 설정된 색이 적용됩니다.\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 border-radius 속성값이 설정되어 있어도\n   일부 브라우저는 각 테두리의 색상이나 두께가 각각 적용됩니다.\n\n- XCSS 를 사용하지 않고 rgba(), hsl(), hsla() 메소드를 속성에 직접 설정할 경우 브라우저 버전에 따라 적용되지 않을 수 있습니다."
+      "content": "- -nexa-border 속성값을 설정하지 않으면 undefined 가 설정되고, \"medium none #999999\" 로 동작합니다.\n\n- &lt;line-style&gt; 이 \"double\" 일 때 두 줄을 다른 색으로 설정할 수 없습니다.\n   &lt;color&gt; 에 설정된 색이 두 줄에 모두 적용됩니다.\n\n- 스크립트로 접근 시 속성명은 \"border\"를 사용해야 합니다.\n\n\n◆ Nexacro Runtime Environment 제약\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 top &gt; right &gt; bottom &gt; left 순으로 겹쳐서 표시됩니다.\n\n- &lt;line-style&gt; 에 \"double\",\"groove\",\"ridge\",\"inset\",\"outset\" 값을 설정해도 적용되지 않습니다.\n\n- &lt;line-width&gt; 에 \"thin\",\"medium\",\"thick\" 값을 설정해도 적용되지 않습니다.\n\n\n◆ Web Runtime Environment 제약\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 웹브라우저에 따라 테두리가 겹쳐지는 순서가 다르게 처리될 수 있습니다.\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 border-radius 속성값이 설정되어 있으면 \n   두께는 각 테두리 별로 따로 적용되고, 색상은 top 에 설정된 색이 적용됩니다.\n\n- 각 테두리의 색상이나 두께를 다르게 설정했을 경우 border-radius 속성값이 설정되어 있어도\n   일부 브라우저는 각 테두리의 색상이나 두께가 각각 적용됩니다.\n\n- XCSS 를 사용하지 않고 rgba(), hsl(), hsla() 메소드를 속성에 직접 설정할 경우 브라우저 버전에 따라 적용되지 않을 수 있습니다."
     },
     {
       "id": "p_01_-nexa-edge",
@@ -2903,7 +2903,7 @@
     {
       "id": "p_08_-nexa-edge",
       "type": "pre",
-      "content": "- -nexa-edge 속성값을 설정하지 않으면 undefined 가 설정되고, \"none\" 으로 동작합니다.\n\n- 스크립트로 접근 시 속성명은 \"edge\" 를 사용해야 합니다.\n\n- Calendar 내부에 테두리 형태로 이미지를 표시하고자 할 때 사용하는 속성입니다.\n\n- -nexa-edge 속성값을 설정하면 이미지의 상/하/좌/우 일정 영역(<fixedwidth>,<fixedheight> 값)을 고정하고 안쪽 사각형 영역을 Stretch 하여 처리합니다.\n\n- background 속성에 의해 배경색 또는 이미지가 설정되어 있어도 -nexa-edge 속성에 설정된 이미지가 제일 위에 표시됩니다.\n\n- TypeDefinition 영역의 Services 에 정의된 사용자 Prefix 는 테마 또는 XCSS 에서 이미지경로로 사용할 수 없습니다.\n   사용자 Prefix 는 스크립트 또는 넥사크로 스튜디오에서 속성값으로 설정 시 사용할 수 있습니다.\n\n\n◆ WRE 제약\n\n- <fixedwidth>,<fixedheight> 값이 이미지 사이즈의 1/2 을 초과할 경우 브라우저별로 보이는 형태가 다를 수 있습니다.\n\n- CSS3 스펙을 지원하지 않는 브라우저 버전에서는 정상적으로 표시되지 않을 수 있습니다."
+      "content": "- -nexa-edge 속성값을 설정하지 않으면 undefined 가 설정되고, \"none\" 으로 동작합니다.\n\n- 스크립트로 접근 시 속성명은 \"edge\" 를 사용해야 합니다.\n\n- Calendar 내부에 테두리 형태로 이미지를 표시하고자 할 때 사용하는 속성입니다.\n\n- -nexa-edge 속성값을 설정하면 이미지의 상/하/좌/우 일정 영역(&lt;fixedwidth&gt;,&lt;fixedheight&gt; 값)을 고정하고 안쪽 사각형 영역을 Stretch 하여 처리합니다.\n\n- background 속성에 의해 배경색 또는 이미지가 설정되어 있어도 -nexa-edge 속성에 설정된 이미지가 제일 위에 표시됩니다.\n\n- TypeDefinition 영역의 Services 에 정의된 사용자 Prefix 는 테마 또는 XCSS 에서 이미지경로로 사용할 수 없습니다.\n   사용자 Prefix 는 스크립트 또는 넥사크로 스튜디오에서 속성값으로 설정 시 사용할 수 있습니다.\n\n\n◆ WRE 제약\n\n- &lt;fixedwidth&gt;,&lt;fixedheight&gt; 값이 이미지 사이즈의 1/2 을 초과할 경우 브라우저별로 보이는 형태가 다를 수 있습니다.\n\n- CSS3 스펙을 지원하지 않는 브라우저 버전에서는 정상적으로 표시되지 않을 수 있습니다."
     },
     {
       "id": "p_01_-nexa-padding",
@@ -3203,7 +3203,7 @@
     {
       "id": "p_08_popupsize",
       "type": "pre",
-      "content": "- popupsize 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n  undefined 를 설정하면 팝업달력(DatePicker)의 너비와 높이는 각각 \"200\", \"220\" 으로 적용됩니다.\n\n- <strWidth> 값과 <strHeight> 값은 공백문자로 구분하여 문자열로 설정합니다."
+      "content": "- popupsize 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n  undefined 를 설정하면 팝업달력(DatePicker)의 너비와 높이는 각각 \"200\", \"220\" 으로 적용됩니다.\n\n- &lt;strWidth&gt; 값과 &lt;strHeight&gt; 값은 공백문자로 구분하여 문자열로 설정합니다."
     },
     {
       "id": "p_01_popuptype",
@@ -3403,7 +3403,7 @@
     {
       "id": "p_08_right",
       "type": "pre",
-      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(<strCompID>)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(<strCompID>)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(<nVal>)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
+      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(&lt;strCompID&gt;)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(&lt;strCompID&gt;)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(&lt;nVal&gt;)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
     },
     {
       "id": "p_01_rtl",
@@ -3953,7 +3953,7 @@
     {
       "id": "p_08_top",
       "type": "pre",
-      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(<strCompID>)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(<strCompID>)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(<nVal>)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
+      "content": "- 좌표값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 좌표값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(&lt;strCompID&gt;)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(&lt;strCompID&gt;)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(&lt;nVal&gt;)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
     },
     {
       "id": "p_01_type",
@@ -4053,7 +4053,7 @@
     {
       "id": "p_08_usecontextmenu",
       "type": "pre",
-      "content": "- usecontextmenu 속성값을 설정하지 않으면 true 로 적용됩니다.\n\n- Environment 의 usecontextmenu 속성값이 \"none\" 또는 \"form\" 인 경우 Calendar 의 usecontextmenu 속성은 false 로 동작합니다.\n\n- 기본팝업메뉴란 마우스 오른쪽 버튼 클릭하거나 터치를 일정시간 유지할 때 시스템에 의해 표시되는 자동 메뉴를 의미합니다.\n\n- 기본팝업메뉴는 oncontextmenu 이벤트가 발생한 후에 표시됩니다.\n\n- 기본팝업메뉴를 일시적으로 표시하지 않으려면 oncontextmenu 이벤트에서 preventDefault() 를 실행하여 Default Action 을 취소하거나\n   환경에 따라 onrbuttondown, onrbuttonup 이벤트에서 preventDefault() 를 실행하여 oncontextmenu 이벤트 발생을 취소할 수 있습니다.\n\n- 일반적으로 onrbuttondown -> onrbuttonup -> oncontextmenu 순서로 이벤트가 발생하지만\n   예외적으로 아래 환경은 onrbuttondown -> oncontextmenu -> onrbuttonup 순서로 이벤트가 발생합니다.\n   : Safari 브라우저, macOS 환경의 전체 웹브라우저, Mobile 전체환경\n\n\n◆ iOS 제약\n\n- iOS 는 기본팝업메뉴를 제어할 수 없는 제약으로 지원하지 않습니다."
+      "content": "- usecontextmenu 속성값을 설정하지 않으면 true 로 적용됩니다.\n\n- Environment 의 usecontextmenu 속성값이 \"none\" 또는 \"form\" 인 경우 Calendar 의 usecontextmenu 속성은 false 로 동작합니다.\n\n- 기본팝업메뉴란 마우스 오른쪽 버튼 클릭하거나 터치를 일정시간 유지할 때 시스템에 의해 표시되는 자동 메뉴를 의미합니다.\n\n- 기본팝업메뉴는 oncontextmenu 이벤트가 발생한 후에 표시됩니다.\n\n- 기본팝업메뉴를 일시적으로 표시하지 않으려면 oncontextmenu 이벤트에서 preventDefault() 를 실행하여 Default Action 을 취소하거나\n   환경에 따라 onrbuttondown, onrbuttonup 이벤트에서 preventDefault() 를 실행하여 oncontextmenu 이벤트 발생을 취소할 수 있습니다.\n\n- 일반적으로 onrbuttondown -&gt; onrbuttonup -&gt; oncontextmenu 순서로 이벤트가 발생하지만\n   예외적으로 아래 환경은 onrbuttondown -&gt; oncontextmenu -&gt; onrbuttonup 순서로 이벤트가 발생합니다.\n   : Safari 브라우저, macOS 환경의 전체 웹브라우저, Mobile 전체환경\n\n\n◆ iOS 제약\n\n- iOS 는 기본팝업메뉴를 제어할 수 없는 제약으로 지원하지 않습니다."
     },
     {
       "id": "p_01_usesoftkeyboard",
@@ -4203,7 +4203,7 @@
     {
       "id": "p_08_value",
       "type": "pre",
-      "content": "- value 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n\n- editformat 속성에 따라서 value 속성이 가질 수 있는 값이 달라지므로 주의하셔야 합니다.\n\n- editformat 속성에 날짜관련 마스크 문자만 설정되어 있으면 value 속성은 8자리 길이의 날짜만 가질 수 있습니다.\n   editformat 속성에 시간관련 마스크 문자만 설정되어 있으면 value 속성은 9자리 길이의 시간만 가질 수 있습니다.\n   editformat 속성에 날짜와 시간관련 마스크 문자가 모두 설정되어 있으면 value 속성은 17자리 길이의 날짜와 시간을 가질 수 있습니다.\n\n- value 속성이 Dataset 에 바인드 되어 있을 경우 datatyperule 속성값에 따라 value 속성의 타입 처리가 달라집니다.\n   > datatyperule=\"1.0\" 일 때 : 바인드된 Column 의 타입으로 value 속성의 타입이 변경됩니다.\n   > datatyperule=\"2.0\" 일 때 : 유효한 값일 경우 value 속성은 string 타입으로 처리됩니다.\n                                              유효한 값이 아닌 경우 바인드된 Column 의 타입으로 처리됩니다.\n\n- value 속성이 Dataset 에 바인드 되어 있지 않을 경우 스크립트로 value 속성값 설정 시 유효성에 따라 타입 처리가 달라집니다.\n   > 유효한 값을 설정했을 경우 string 타입으로 처리됩니다.\n   >: 유효하지 않은 값을 설정했을 경우 설정한 값의 타입으로 처리됩니다."
+      "content": "- value 속성값을 설정하지 않으면 undefined 로 적용됩니다.\n\n- editformat 속성에 따라서 value 속성이 가질 수 있는 값이 달라지므로 주의하셔야 합니다.\n\n- editformat 속성에 날짜관련 마스크 문자만 설정되어 있으면 value 속성은 8자리 길이의 날짜만 가질 수 있습니다.\n   editformat 속성에 시간관련 마스크 문자만 설정되어 있으면 value 속성은 9자리 길이의 시간만 가질 수 있습니다.\n   editformat 속성에 날짜와 시간관련 마스크 문자가 모두 설정되어 있으면 value 속성은 17자리 길이의 날짜와 시간을 가질 수 있습니다.\n\n- value 속성이 Dataset 에 바인드 되어 있을 경우 datatyperule 속성값에 따라 value 속성의 타입 처리가 달라집니다.\n   &gt; datatyperule=\"1.0\" 일 때 : 바인드된 Column 의 타입으로 value 속성의 타입이 변경됩니다.\n   &gt; datatyperule=\"2.0\" 일 때 : 유효한 값일 경우 value 속성은 string 타입으로 처리됩니다.\n                                              유효한 값이 아닌 경우 바인드된 Column 의 타입으로 처리됩니다.\n\n- value 속성이 Dataset 에 바인드 되어 있지 않을 경우 스크립트로 value 속성값 설정 시 유효성에 따라 타입 처리가 달라집니다.\n   &gt; 유효한 값을 설정했을 경우 string 타입으로 처리됩니다.\n   &gt;: 유효하지 않은 값을 설정했을 경우 설정한 값의 타입으로 처리됩니다."
     },
     {
       "id": "p_01_visible",
@@ -4343,7 +4343,7 @@
     {
       "id": "p_08_width",
       "type": "pre",
-      "content": "- 너비값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 너비값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(<strCompID>)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(<strCompID>)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(<nVal>)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
+      "content": "- 너비값에 단위를 생략할 경우 pixel 값으로 적용됩니다.\n\n- 너비값에 기준 컴포넌트 또는 단위문자를 포함할 경우 문자열 형태로 설정하여야 합니다.\n\n◆ 기준 컴포넌트 설정 시 유의할 점\n\n- 속성값을 기준 컴포넌트(&lt;strCompID&gt;)를 참조하도록 설정한 경우 다음 사항을 유의해주세요.\n\n스크립트로 속성값에 설정한 기준 컴포넌트 값(&lt;strCompID&gt;)을 변경하는 경우 유효한 컴포넌트 값이 아니면(잘못된 컴포넌트 id, 부모 또는 stepindex가 다른 컴포넌트) 기준 컴포넌트 값은 무시하고 부모를 기준으로 좌표값(&lt;nVal&gt;)을 적용합니다.\n스크립트로 기준 컴포넌트의 크기나 위치 속성값을 변경되는 경우(속성값에 영향을 주는 메소드 실행으로 인한 변경 포함) 변경된 속성값이 기준 컴포넌트를 참조하는 컴포넌트에 바로 반영되지 않습니다.\n예를 들어 Button01 컴포넌트의 left 속성값이 \"Button00:10px\"인 경우 스크립트로 Button00 컴포넌트의 right 속성값이 변경하더라도 Button01 컴포넌트의 위치는 변경되지 않습니다.\n기준 컴포넌트의 크기나 위치 속성값이 변경된 것을 기준 컴포넌트를 참조하는 컴포넌트에 반영하려면 스크립트에서 기준 컴포넌트의 크기나 위치 속성값 변경 후 Form 오브젝트의 resetScroll 메소드를 실행해주어야 합니다."
     },
     {
       "id": "p_01_word-spacing",

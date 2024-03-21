@@ -14,16 +14,17 @@ soup = BeautifulSoup(html, 'html.parser')
 # (공통 함수) 설명 텍스트 가져오기 
 # Object > Description
 # Object > Remark
-def get_desc_text(soup, title):
+def get_desc_text(soup, title, item=None):
     desc_title_td = soup.find('td', class_='sub_title', string=title)
     if not desc_title_td:
-        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
+        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다. 참고 {item}")
         
     desc_content_td = desc_title_td.find_next('td', class_='list')
     if desc_content_td and desc_content_td.pre:
         desc_text = desc_content_td.pre.get_text().strip()
+        desc_text = get_html_text(desc_text)
     else:
-        print(f"{title} 본문 텍스트를 포함한 요소를 찾을 수 없습니다.")
+        print(f"{title} 본문 텍스트를 포함한 요소를 찾을 수 없습니다. 참고 {item}")
     
     return desc_text
 
@@ -32,10 +33,11 @@ def get_desc_text(soup, title):
 # Object > Basic Key Action
 # Object > Accessibility Key Action
 # Object > Constructor
-def get_table_content(soup, title, layout, bTitle=None):
+# Property > Setting Syntax
+def get_table_content(soup, title, layout, bTitle=None, item=None):
     content_title_td = soup.find('td', class_='sub_title', string=title)
     if not content_title_td:
-        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다.")
+        raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다. 참고 {item}")
 
     if title=="Constructor":
         content_tds = content_title_td.find_next('td', class_='list').find_all_next('td', class_='list')
@@ -47,7 +49,11 @@ def get_table_content(soup, title, layout, bTitle=None):
             break
 
         if content_td and content_td.find_next().name=='pre':
-            add_element("u_09_"+str(random.random()), "pre", content_td.pre.get_text().strip())
+            if title=="Constructor":
+                content_type = "command"
+            else:
+                content_type = "pre"
+            add_element("u_09_"+str(random.random()), content_type, content_td.pre.get_text().strip())
         elif content_td and content_td.find_next().name=='table':
             
             # 속성 제거
@@ -110,6 +116,16 @@ def get_table_content(soup, title, layout, bTitle=None):
                 if index == 2:
                     table_tag.find('td')['class'] = "code_cell"
                     layout = "100%"
+            
+            # Setting Syntax 예외 - colspan=3이 있으면 code_cell, 없으면 th
+            if title == "Setting Syntax":
+                for td_tag in table_tag.find_all('td'):
+                    if 'colspan' in td_tag.attrs and td_tag.attrs['colspan'] == '3':
+                        td_tag['class'] = 'code_cell'
+                    elif 'colspan' not in td_tag.attrs:
+                        th_tag = soup.new_tag('th')
+                        th_tag.string = td_tag.string
+                        td_tag.replace_with(th_tag)          
 
             # div 태그를 제외한 나머지 결과물에서 줄바꿈(\n) 삭제
             for element in table_tag.find_all(string=True):
@@ -118,7 +134,7 @@ def get_table_content(soup, title, layout, bTitle=None):
 
             add_element("u_10_"+str(random.random()), "table", str(table_tag), get_table_option(layout))            
         else:
-            print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다.")
+            print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다. 참고 {item}")
 
 # 속성, 메서드, 이벤트 목록 처리
 def set_item_list(soup, title="Property"):
@@ -132,13 +148,32 @@ def set_item_list(soup, title="Property"):
         if title=="Property":
             set_property_data(item)
         elif title=="Method":
-            set_method_date(item)
+            set_event_data(item)
         elif title=="Event":
             set_event_data(item)
 
 # 속성 데이터 처리
 def set_property_data(property):
-    add_element("u_16"+property, "heading3", property)
+    property_url = f"{url_github}Components_Component_Calendar_Property_{property}.html"
+    property_response = requests.get(property_url)
+    property_html = property_response.text
+    property_soup = BeautifulSoup(property_html, 'html.parser')
+
+    add_element(f"p_01_{property}", "heading3", property)
+    add_element(f"p_02_{property}", "pre", get_desc_text(property_soup, "Description"))
+    add_element(f"p_03_{property}", "headline", "지원 환경")
+    add_element(f"p_04_{property}", "table", get_support_table(property_soup), get_table_option())
+    add_element(f"p_05_{property}", "headline", "속성 타입")
+    add_element(f"p_06_{property}", "table", get_property_type_table(property_soup), get_table_option('80,70,90,90,110,80,110,140'))
+    add_element(f"p_07_{property}", "headline", "Syntax")
+    add_element(f"p_08_{property}", "command", get_desc_text(property_soup, "Syntax"))
+    if property_soup.find('td', class_='sub_title', string="Setting Syntax"):
+        add_element(f"p_09_{property}", "headline", "Setting Syntax")
+        get_table_content(property_soup, "Setting Syntax", "180,120,?", None, property)  
+
+    if property_soup.find('td', class_='sub_title', string="Remark"):
+        add_element(f"p_11_{property}", "headline", "Remark")
+        add_element(f"p_12_{property}", "pre", get_desc_text(property_soup, "Remark", property))       
 
 # 메서드 데이터 처리
 def set_method_data(method):
@@ -190,6 +225,32 @@ def get_support_table(soup):
 
     return "<table class='table column_count_7'><caption></caption><thead><tr><th colspan='2'><div>Desktop NRE</div></th><th colspan='5'><div>Desktop WRE</div></th></tr></thead><tbody><tr><td><div>"+support_icon[0]+" Windows</div></td><td><div>"+support_icon[1]+" macOS</div></td><td><div>"+support_icon[2]+" Edge</div></td><td><div>"+support_icon[3]+" Chrome</div></td><td><div>"+support_icon[4]+" Safari</div></td><td><div>"+support_icon[5]+" Firefox</div></td><td><div>"+support_icon[6]+" Opera</div></td></tr><tr><th colspan='2'><div>Mobile NRE</div></th><th colspan='5'><div>Mobile WRE</div></th></tr><tr><td><div>"+support_icon[7]+" Android</div></td><td><div>"+support_icon[8]+" iOS/iPadOS</div></td><td><div>"+support_icon[9]+" Android</div></td><td><div>"+support_icon[10]+" iOS/iPadOS</div></td><td><div></div></td><td><div></div></td><td><div></div></td></tr></tbody></table>"
 
+# (공통 함수) Property Type 표 생성
+# Object > Property > Property Type
+def get_property_type_table(soup):
+    support_icon = []
+    env_keywords = ["Enum", "Expr", "Control", "Hidden", "ReadOnly", "Bind", "Collection", "StringResource"]
+
+    property_type_title_td = soup.find('td', class_='sub_title', string='Property Type')    
+    if not property_type_title_td:
+        raise ValueError("Property Type 타이틀을 찾을 수 없습니다.")
+    
+    property_type_table_td = property_type_title_td.find_next('td', class_='list')
+    td_keywords = property_type_table_td.find_all('input')
+    for td_keyword in td_keywords:
+        if td_keyword.get('checked'):
+            support_icon.append("■");
+        else:
+            support_icon.append("▢");
+                
+
+    return f"<table class='r_no_border_table column_count_8'><caption></caption><tbody><tr><td><div>{support_icon[0]} {env_keywords[0]}</div></td><td><div>{support_icon[1]} {env_keywords[1]}</div></td><td><div>{support_icon[2]} {env_keywords[2]}</div></td><td><div>{support_icon[3]} {env_keywords[3]}</div></td><td><div>{support_icon[4]} {env_keywords[4]}</div></td><td><div>{support_icon[5]} {env_keywords[5]}</div></td><td><div>{support_icon[6]} {env_keywords[6]}</div></td><td><div>{support_icon[7]} {env_keywords[7]}</div></td></tr></tbody></table>"
+
+# (공통 함수) 텍스트 변환
+def get_html_text(target_text):
+    return target_text.replace("<", "&lt;").replace(">", "&gt;")
+
+
 # (공통 함수) 표 config
 # Object > Supported Environments (110,110,110,110,110,110,110)
 def get_table_option(layout="110,110,110,110,110,110,110"):
@@ -213,6 +274,7 @@ def add_element(id, type, content, option=None):
         element["option"] = option
     elements.append(element)    
 
+# Object 정보 처리
 add_element("u_01", "heading1", "개요")
 add_element("u_02", "pre", get_desc_text(soup, "Description"))
 add_element("u_03", "heading2", "지원 환경")

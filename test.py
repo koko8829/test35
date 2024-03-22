@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup
 
 # URL에서 HTML 가져오기
 url_github = 'https://raw.githubusercontent.com/koko8829/chm_TEST/main/'
-url_object = url_github+'Components_Component_Calendar.html'
+module_name = "Calendar"
+url_object = f'{url_github}Components_Component_{module_name}.html'
 response = requests.get(url_object)
 html = response.text
 
@@ -34,6 +35,8 @@ def get_desc_text(soup, title, item=None):
 # Object > Accessibility Key Action
 # Object > Constructor
 # Property > Setting Syntax
+# Method > Parameters
+# Method > Return
 def get_table_content(soup, title, layout, bTitle=None, item=None):
     content_title_td = soup.find('td', class_='sub_title', string=title)
     if not content_title_td:
@@ -47,13 +50,19 @@ def get_table_content(soup, title, layout, bTitle=None, item=None):
     for index, content_td in enumerate(content_tds):
         if (content_td.find_previous('td', class_='sub_title').get_text() != title):
             break
-
+        
+        # {title} 설명 텍스트만 있는 경우
         if content_td and content_td.find_next().name=='pre':
             if title=="Constructor":
                 content_type = "command"
             else:
                 content_type = "pre"
             add_element("u_09_"+str(random.random()), content_type, content_td.pre.get_text().strip())
+        # {title} 샘플만 있는 경우
+        # 속성 Parameters 항목 중 bringToFront() 처럼 값이 없지만 샘플 설명이 있는 경우
+        elif content_td and content_td.find_next().name == 'br':
+            add_element("u_09_"+str(random.random()), "command", content_td.find_next().find_next().get_text().strip())
+        # {title} 관련 표가 있는 경우 
         elif content_td and content_td.find_next().name=='table':
             
             # 속성 제거
@@ -106,7 +115,7 @@ def get_table_content(soup, title, layout, bTitle=None, item=None):
 
             # Constructor 예외 - 특정 문자열 삭제, class 속성 추가
             target_string = "Sample Call:<br/>"
-            if title == "Constructor":
+            if title == "Constructor" or title == "Parameters":
                 for td_tag in table_tag.find_all('td'):
                     if target_string in ''.join(map(str, td_tag.contents)):
                         td_tag.contents[0].replace_with("")
@@ -148,40 +157,64 @@ def set_item_list(soup, title="Property"):
         if title=="Property":
             set_property_data(item)
         elif title=="Method":
-            set_event_data(item)
+            set_method_data(item)
         elif title=="Event":
             set_event_data(item)
 
 # 속성 데이터 처리
 def set_property_data(property):
-    property_url = f"{url_github}Components_Component_Calendar_Property_{property}.html"
+    property_url = f"{url_github}Components_Component_{module_name}_Property_{property}.html"
     property_response = requests.get(property_url)
     property_html = property_response.text
     property_soup = BeautifulSoup(property_html, 'html.parser')
 
-    add_element(f"p_01_{property}", "heading3", property)
+    add_element(f"p_01_{property}", "heading2", property, get_alias_option(module_name, property))
     add_element(f"p_02_{property}", "pre", get_desc_text(property_soup, "Description"))
     add_element(f"p_03_{property}", "headline", "지원 환경")
     add_element(f"p_04_{property}", "table", get_support_table(property_soup), get_table_option())
     add_element(f"p_05_{property}", "headline", "속성 타입")
     add_element(f"p_06_{property}", "table", get_property_type_table(property_soup), get_table_option('80,70,90,90,110,80,110,140'))
-    add_element(f"p_07_{property}", "headline", "Syntax")
+    add_element(f"p_07_{property}", "headline", "문법")
     add_element(f"p_08_{property}", "command", get_desc_text(property_soup, "Syntax"))
     if property_soup.find('td', class_='sub_title', string="Setting Syntax"):
-        add_element(f"p_09_{property}", "headline", "Setting Syntax")
+        add_element(f"p_09_{property}", "headline", "문법 설정")
         get_table_content(property_soup, "Setting Syntax", "180,120,?", None, property)  
 
     if property_soup.find('td', class_='sub_title', string="Remark"):
-        add_element(f"p_11_{property}", "headline", "Remark")
+        add_element(f"p_11_{property}", "headline", "참고")
         add_element(f"p_12_{property}", "pre", get_desc_text(property_soup, "Remark", property))       
 
 # 메서드 데이터 처리
 def set_method_data(method):
-    add_element("u_16"+method, "heading3", method)
+    method_url = f"{url_github}Components_Component_{module_name}_Method_{method}.html"
+    method_response = requests.get(method_url)
+    method_html = method_response.text
+    method_soup = BeautifulSoup(method_html, 'html.parser')
+
+    add_element("m_01"+method, "heading2", method, get_alias_option(module_name, method))
+    add_element(f"m_02_{method}", "pre", get_desc_text(method_soup, "Description"))
+    add_element(f"m_03_{method}", "headline", "지원 환경")
+    add_element(f"m_04_{method}", "table", get_support_table(method_soup), get_table_option()) 
+    add_element(f"m_05_{method}", "headline", "문법")
+    add_element(f"m_06_{method}", "command", get_desc_text(method_soup, "Syntax"))    
+    add_element(f"m_07_{method}", "headline", "파라미터")
+    get_table_content(method_soup, "Parameters", "180,120,?", True, method) 
+
+    if method_soup.find('td', class_='sub_title', string="Return"):
+        # Return 항목이 없는 경우 "없음"으로 자동 기재되어 있어 해당 건 예외 처리
+        content_title_td = method_soup.find('td', class_='sub_title', string="Return")
+        content_td = content_title_td.find_next('td', class_='list')
+        if content_td.text.strip() != "없음":
+            add_element(f"m_08_{method}", "headline", "반환")
+            get_table_content(method_soup, "Return", "180,?", True, method)  
+
+    if method_soup.find('td', class_='sub_title', string="Remark"):
+        add_element(f"m_09_{method}", "headline", "참고")
+        add_element(f"m_10_{method}", "pre", get_desc_text(method_soup, "Remark", method))        
 
 # 속성 데이터 처리
 def set_event_data(event):
-    add_element("u_16"+event, "heading3", event)        
+    add_element("e_16"+event, "heading3", event)        
 
 
 # (공통 함수) Structure 이미지 파일명 가져오기
@@ -260,6 +293,11 @@ def get_table_option(layout="110,110,110,110,110,110,110"):
         "table_layout_setting": layout
     }
 
+# (공통 함수) alias config
+def get_alias_option(module, title):
+    return {
+        "alias": module+"_"+title
+    }
 
 # JSON 파일 생성
 elements = []
@@ -294,11 +332,11 @@ add_element("u_14", "heading2", "Status")
 get_table_content(soup, "Status", "120,120,?", True)
 add_element("u_15", "heading2", "Control")
 get_table_content(soup, "Control", "120,120,?", True)
-add_element("u_16", "heading2", "속성")
+add_element("u_16", "heading1", "속성")
 set_item_list(soup, "Property")
-add_element("u_17", "heading2", "메서드")
+add_element("u_17", "heading1", "메서드")
 set_item_list(soup, "Method")
-add_element("u_18", "heading2", "이벤트")
+add_element("u_18", "heading1", "이벤트")
 set_item_list(soup, "Event")
 
 data = {

@@ -77,6 +77,13 @@ def get_table_content(soup, title, layout, bTitle=None, item=None):
             for colgroup in table_tag.find_all('colgroup'):
                 colgroup.decompose()
 
+            # a 태그 삭제(a 태그 내 텍스트는 유지)
+            for td_tag in content_td.find_all('td'):
+                a_tag = td_tag.find('a')
+                if a_tag:
+                    a_text = a_tag.get_text()
+                    td_tag.string = a_text
+
             bTitleSkip = True
 
             if bTitle:
@@ -214,7 +221,39 @@ def set_method_data(method):
 
 # 속성 데이터 처리
 def set_event_data(event):
-    add_element("e_16"+event, "heading3", event)        
+    event_url = f"{url_github}Components_Component_{module_name}_Event_{event}.html"
+    event_response = requests.get(event_url)
+    event_html = event_response.text
+    event_soup = BeautifulSoup(event_html, 'html.parser')
+
+    add_element("e_01"+event, "heading2", event, get_alias_option(module_name, event)) 
+    add_element(f"e_02_{event}", "pre", get_desc_text(event_soup, "Description"))
+    add_element(f"e_03_{event}", "headline", "지원 환경")
+    add_element(f"e_04_{event}", "table", get_support_table(event_soup), get_table_option()) 
+    add_element(f"e_05_{event}", "headline", "문법")
+    add_element(f"e_06_{event}", "command", get_desc_text(event_soup, "Syntax"))    
+    add_element(f"e_07_{event}", "headline", "파라미터")
+    get_table_content(event_soup, "Parameters", "120,240,?", True, event) 
+
+    if event_soup.find('td', class_='sub_title', string="Return"):
+        # Return 항목이 없는 경우 "없음"으로 자동 기재되어 있어 해당 건 예외 처리
+        content_title_td = event_soup.find('td', class_='sub_title', string="Return")
+        content_td = content_title_td.find_next('td', class_='list')
+        if content_td.text.strip() != "없음":
+            add_element(f"e_08_{event}", "headline", "반환")
+            get_table_content(event_soup, "Return", "180,?", True, event)  
+
+    if event_soup.find('td', class_='sub_title', string="Remark"):
+        add_element(f"e_09_{event}", "headline", "참고")
+        add_element(f"e_10_{event}", "pre", get_desc_text(event_soup, "Remark", event))     
+
+    if event_soup.find('td', class_='sub_title', string="Basic Action"):
+        add_element(f"e_11_{event}", "headline", "Basic Action")
+        add_element(f"e_12_{event}", "pre", get_desc_text(event_soup, "Basic Action", event))   
+
+    if event_soup.find('td', class_='sub_title', string="Default Action"):
+        add_element(f"e_13_{event}", "headline", "Default Action")
+        add_element(f"e_14_{event}", "pre", get_desc_text(event_soup, "Default Action", event))                            
 
 
 # (공통 함수) Structure 이미지 파일명 가져오기

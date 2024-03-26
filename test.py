@@ -10,26 +10,6 @@ start_time = time.time()
 url_github = 'https://raw.githubusercontent.com/koko8829/chm_TEST/main/'
 file_path = 'C:\\Users\\tobesoft\\Downloads\\Manual_NPN24_24022700_10_KOR\\2688\\KOR\\'
 
-module_name = "Acceleration"
-# module_cagegory = "Components_Component_"
-# module_cagegory = "Components_ContainerComponent_"
-# module_cagegory = "Components_Animation Objects_"
-# module_cagegory = ""
-# module_cagegory = "Application_Objects_"
-# module_cagegory = "Form_Objects_"
-# module_cagegory = "Frames_"
-# module_cagegory = "Components_Animation Objects_Animation_Objects_"
-# module_cagegory = "Components_System Component_"
-# module_cagegory = "Data Objects_"
-# module_cagegory = "Script_Nexacro Objects_"
-# module_cagegory = "Event Objects_"
-# module_cagegory = "EventInfo Objects_"
-# module_cagegory = "Misc. Objects_"
-module_cagegory = "DeviceAPI_"
-
-# 간혹 상세 목록이 없는 경우 처리
-except_list = ['FileDownTransfer', 'FileUpTransfer', 'Panel', 'Animation', 'AnimationTimeline', 'ColumnInfo', 'Dataset', 'DomParser', 'XmlSerializer']
-
 commcon_path = None
 bFile = True
 
@@ -39,7 +19,7 @@ else:
     commcon_path = url_github
 
 # (공통 함수) SOUP 처리하기
-def get_soup(module_name, item_type=None, item_name=None):
+def get_soup(module_name, module_cagegory, item_type=None, item_name=None):
     if item_type:
         target_object = f"{commcon_path}{module_cagegory}{module_name}_{item_type}_{item_name}.html"
     else:
@@ -55,7 +35,6 @@ def get_soup(module_name, item_type=None, item_name=None):
         return_soup = BeautifulSoup(html, 'html.parser')
         return return_soup
     
-soup = get_soup(module_name)    
 
 # (공통 함수) 설명 텍스트 가져오기 
 # Object > Description
@@ -83,7 +62,7 @@ def get_desc_text(soup, title, item=None):
 # Property > Setting Syntax
 # Method > Parameters
 # Method > Return
-def get_table_content(soup, title, layout, bTitle=None, item=None):
+def get_table_content(soup, title, layout, bTitle=None, item=None, constructor_except=None):
     content_title_td = soup.find('td', class_='sub_title', string=title)
     if not content_title_td:
         print(f"{title}을 포함한 요소를 찾을 수 없습니다. 참고 {item}")
@@ -134,7 +113,7 @@ def get_table_content(soup, title, layout, bTitle=None, item=None):
             bTitleSkip = True
 
             if bTitle:
-                if not (title == 'Constructor' and module_name in except_list):
+                if not (title == 'Constructor' and constructor_except):
                     thead_tag = soup.new_tag('thead')
                     first_tr_tag = table_tag.find('tr')
                     first_tr_tag.wrap(thead_tag)
@@ -177,7 +156,7 @@ def get_table_content(soup, title, layout, bTitle=None, item=None):
                         td_tag.contents[1].replace_with("")
                         td_tag['class'] = "code_cell"
 
-                if index == 2 or (title == 'Constructor' and module_name in except_list and index == 1):
+                if index == 2 or (title == 'Constructor' and constructor_except and index == 1):
                     table_tag.find('td')['class'] = "code_cell"
                     layout = "100%"
             
@@ -201,7 +180,7 @@ def get_table_content(soup, title, layout, bTitle=None, item=None):
             print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다. 참고 {item}")
 
 # 속성, 메서드, 이벤트 목록 처리
-def set_item_list(soup, title="Property"):
+def set_item_list(soup, module_name, module_category, title="Property"):
     content_title_td = soup.find('td', class_='sub_title', string=title)
     if not content_title_td:
         print(f"{title}을 포함한 요소를 찾을 수 없습니다.")
@@ -211,15 +190,15 @@ def set_item_list(soup, title="Property"):
     item_list = [a_tag.string for a_tag in table_tag.find_all('a')]
     for item in item_list:
         if title=="Property":
-            set_property_data(item)
+            set_property_data(module_name, module_category, item)
         elif title=="Method":
-            set_method_data(item)
+            set_method_data(module_name, module_category, item)
         elif title=="Event":
-            set_event_data(item)
+            set_event_data(module_name, module_category, item)
 
 # 속성 데이터 처리
-def set_property_data(property):
-    property_soup = get_soup(module_name, "Property", property)
+def set_property_data(module_name, module_category, property):
+    property_soup = get_soup(module_name, module_category, "Property", property)
 
     add_element(f"p_01_{property}", "heading2", property, get_alias_option(module_name, property))
     add_element(f"p_02_{property}", "pre", get_desc_text(property_soup, "Description"))
@@ -241,8 +220,8 @@ def set_property_data(property):
         add_element(f"p_12_{property}", "pre", get_desc_text(property_soup, "Remark", property))       
 
 # 메서드 데이터 처리
-def set_method_data(method):
-    method_soup = get_soup(module_name, "Method", method)    
+def set_method_data(module_name, module_category, method):
+    method_soup = get_soup(module_name, module_category, "Method", method)    
 
     add_element("m_01"+method, "heading2", method, get_alias_option(module_name, method))
     add_element(f"m_02_{method}", "pre", get_desc_text(method_soup, "Description"))
@@ -270,8 +249,8 @@ def set_method_data(method):
         add_element(f"m_10_{method}", "pre", get_desc_text(method_soup, "Remark", method))        
 
 # 속성 데이터 처리
-def set_event_data(event):
-    event_soup = get_soup(module_name, "Event", event)     
+def set_event_data(module_name, module_category, event):
+    event_soup = get_soup(module_name, module_category, "Event", event)     
 
     add_element("e_01"+event, "heading2", event, get_alias_option(module_name, event)) 
     add_element(f"e_02_{event}", "pre", get_desc_text(event_soup, "Description"))
@@ -404,64 +383,91 @@ def add_element(id, type, content, option=None):
         element["option"] = option
     elements.append(element)    
 
-# Object 정보 처리
-add_element("u_01", "heading1", "개요")
-add_element("u_02", "pre", get_desc_text(soup, "Description"))
-add_element("u_03", "heading2", "지원 환경")
-add_element("u_04", "table", get_support_table(soup), get_table_option())
+# 파일 처리 시작
+def generate_object_file(target_module_name, target_module_cagegory, constructor_except):
+    soup = get_soup(target_module_name, target_module_cagegory) 
 
-if soup.find('td', class_='sub_title', string="Remark"):
-    add_element("u_05", "pre", get_desc_text(soup, "Remark"))
+    # Object 정보 처리
+    add_element("u_01", "heading1", "개요")
+    add_element("u_02", "pre", get_desc_text(soup, "Description"))
+    add_element("u_03", "heading2", "지원 환경")
+    add_element("u_04", "table", get_support_table(soup), get_table_option())
 
-if soup.find('td', class_='sub_title', string="Structure"):
-    add_element("u_06", "heading2", "컴포넌트 구조")
-    add_element("u_07", "normal", get_structure_img(soup))
+    if soup.find('td', class_='sub_title', string="Remark"):
+        add_element("u_05", "pre", get_desc_text(soup, "Remark"))
 
-if soup.find('td', class_='sub_title', string="Contents Sizing"):
-    add_element("u_08", "heading2", "컴포넌트, 내부 컨텐츠 크기")
-    get_table_content(soup, "Contents Sizing", "120,?")
+    if soup.find('td', class_='sub_title', string="Structure"):
+        add_element("u_06", "heading2", "컴포넌트 구조")
+        add_element("u_07", "normal", get_structure_img(soup))
 
-if soup.find('td', class_='sub_title', string="Basic Key Action"):    
-    add_element("u_11", "heading2", "Basic Key Action")
-    get_table_content(soup, "Basic Key Action", "120,120,?", True)
+    if soup.find('td', class_='sub_title', string="Contents Sizing"):
+        add_element("u_08", "heading2", "컴포넌트, 내부 컨텐츠 크기")
+        get_table_content(soup, "Contents Sizing", "120,?")
 
-if soup.find('td', class_='sub_title', string="Accessibility Key Action"):  
-    add_element("u_12", "heading2", "Accessibility Key Action")
-    get_table_content(soup, "Accessibility Key Action", "120,120,?", True)
+    if soup.find('td', class_='sub_title', string="Basic Key Action"):    
+        add_element("u_11", "heading2", "Basic Key Action")
+        get_table_content(soup, "Basic Key Action", "120,120,?", True)
 
-if soup.find('td', class_='sub_title', string="Constructor"):      
-    add_element("u_13", "heading2", "생성자")
-    get_table_content(soup, "Constructor", "120,120,?", True)
+    if soup.find('td', class_='sub_title', string="Accessibility Key Action"):  
+        add_element("u_12", "heading2", "Accessibility Key Action")
+        get_table_content(soup, "Accessibility Key Action", "120,120,?", True)
 
-if soup.find('td', class_='sub_title', string="Status"):    
-    add_element("u_14", "heading2", "Status")
-    get_table_content(soup, "Status", "120,120,?", True)
+    if soup.find('td', class_='sub_title', string="Constructor"):      
+        add_element("u_13", "heading2", "생성자")
+        get_table_content(soup, "Constructor", "120,120,?", True, None, constructor_except)
 
-if soup.find('td', class_='sub_title', string="Control"):  
-    add_element("u_15", "heading2", "Control")
-    get_table_content(soup, "Control", "120,120,?", True)
+    if soup.find('td', class_='sub_title', string="Status"):    
+        add_element("u_14", "heading2", "Status")
+        get_table_content(soup, "Status", "120,120,?", True)
 
-if soup.find('td', class_='sub_title', string="Property"):  
-    add_element("u_16", "heading1", "속성")
-    set_item_list(soup, "Property")
+    if soup.find('td', class_='sub_title', string="Control"):  
+        add_element("u_15", "heading2", "Control")
+        get_table_content(soup, "Control", "120,120,?", True)
 
-if soup.find('td', class_='sub_title', string="Method"): 
-    add_element("u_17", "heading1", "메서드")
-    set_item_list(soup, "Method")
+    if soup.find('td', class_='sub_title', string="Property"):  
+        add_element("u_16", "heading1", "속성")
+        set_item_list(soup, target_module_name, target_module_cagegory, "Property")
 
-if soup.find('td', class_='sub_title', string="Event"): 
-    add_element("u_18", "heading1", "이벤트")
-    set_item_list(soup, "Event")
+    if soup.find('td', class_='sub_title', string="Method"): 
+        add_element("u_17", "heading1", "메서드")
+        set_item_list(soup, target_module_name, target_module_cagegory, "Method")
 
-data = {
-    "elements": elements
-}
+    if soup.find('td', class_='sub_title', string="Event"): 
+        add_element("u_18", "heading1", "이벤트")
+        set_item_list(soup, target_module_name, target_module_cagegory, "Event")
 
-# JSON 파일로 저장
-with open(f'_file\\{module_name}.json', 'w', encoding='utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii=False, indent=2)    
+    data = {
+        "elements": elements
+    }
 
-print("JSON 파일이 생성되었습니다.")    
+    # JSON 파일로 저장
+    with open(f'_file\\{target_module_name}.json', 'w', encoding='utf-8') as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=2)    
+
+# 개별 파일 테스트 용
+# 개별 파일 테스트 시에는 아래 for 문을 주석 처리하고 테스트 진행
+'''
+target_module_name = ''
+target_module_category = ''
+target_constructor_except = 
+generate_object_file(target_module_name, target_module_category, target_constructor_except)
+'''
+        
+# 오브젝트 목록 JSON 파일 읽기
+with open('file_list.json', 'r') as file:
+    data = json.load(file)
+
+for category in data['categorys']:
+    target_module_category = category['name']
+
+    # items 항목 순회
+    for item in category['items']:
+        target_module_name = item['name']
+        target_constructor_except = item.get('except', False)
+        temp_target_module_category = item.get('category', target_module_category)
+        print(target_module_name)
+        generate_object_file(target_module_name, temp_target_module_category, target_constructor_except)
+
 
 end_time = time.time()
 execution_time = end_time - start_time

@@ -39,20 +39,27 @@ def get_soup(module_name, module_cagegory, item_type=None, item_name=None):
 # (공통 함수) 설명 텍스트 가져오기 
 # Object > Description
 # Object > Remark
-def get_desc_text(soup, title, item=None):
+def get_desc_text(soup, title, item=None, remark=None):
     desc_title_td = soup.find('td', class_='sub_title', string=title)
     if not desc_title_td:
         print(f"{title}을 포함한 요소를 찾을 수 없습니다. 참고 {item}")
         raise ValueError(f"{title}을 포함한 요소를 찾을 수 없습니다. 참고 {item}")
-        
+    
+    table_tag = None  
     desc_content_td = desc_title_td.find_next('td', class_='list')
     if desc_content_td and desc_content_td.pre:
+        table_tag = desc_content_td.find('table')
+        if table_tag:
+            table_tag.extract()
         desc_text = desc_content_td.pre.get_text().strip()
         desc_text = get_html_text(desc_text)
     else:
         print(f"{title} 본문 텍스트를 포함한 요소를 찾을 수 없습니다. 참고 {item}")
     
-    return desc_text
+    if remark:
+        return desc_text, table_tag
+    else:
+        return desc_text
 
 # (공통 함수) 제목, 표 형식 가져오기 
 # Object > Contents Sizing
@@ -179,6 +186,76 @@ def get_table_content(soup, title, layout, bTitle=None, item=None, constructor_e
         else:
             print(f"{title} 본문 텍스트, 표를 포함한 요소를 찾을 수 없습니다. 참고 {item}")
 
+# Remark 등에 테이블이 있는 경우 처리
+# (soup, title, layout, bTitle=None, item=None, constructor_except=None):
+def get_simple_table_content(soup, table_tag, item=None):
+    bTitle = True
+
+    if table_tag:
+        
+        # 속성 제거
+        table_tag.attrs.clear()
+        for tag in table_tag.find_all():
+            attrs_to_remove = [attr for attr in tag.attrs if attr not in ('colspan', 'rowspan')]
+            for attr in attrs_to_remove:
+                del tag[attr]
+
+        # colgroup 태그 삭제
+        for colgroup in table_tag.find_all('colgroup'):
+            colgroup.decompose()
+
+        # a 태그 삭제(a 태그 내 텍스트는 유지)
+        for td_tag in table_tag.find_all('td'):
+            a_tag = td_tag.find('a')
+            if a_tag:
+                a_text = a_tag.get_text()
+                td_tag.string = a_text
+
+        bTitleSkip = True
+
+        if bTitle:
+            thead_tag = soup.new_tag('thead')
+            first_tr_tag = table_tag.find('tr')
+            first_tr_tag.wrap(thead_tag)
+
+            for td_tag in first_tr_tag.find_all('td'):
+                th_tag = soup.new_tag('th')
+                th_tag.string = td_tag.string
+                if td_tag.get('colspan'):
+                    th_tag['colspan'] = td_tag.get('colspan')
+                td_tag.replace_with(th_tag)
+            bTitleSkip = None
+            bTitle = None                    
+
+        tbody_tag = soup.new_tag('tbody')
+        caption_tag = soup.new_tag('caption')
+
+        for tr_tag in table_tag.find_all('tr'):
+            if(bTitleSkip):
+                tr_tag.wrap(tbody_tag)
+            else:
+                bTitleSkip = True
+
+        table_tag.insert(0, caption_tag)
+
+        # 태그 사이의 공백과 줄바꿈 제거
+        for pre_tag in table_tag.find_all('pre'):
+            pre_tag.string = pre_tag.text.strip()
+
+        for pre_tag in table_tag.find_all('pre'):
+            div_tag = soup.new_tag('div')
+            div_tag.string = pre_tag.string
+            pre_tag.replace_with(div_tag)
+
+        # div 태그를 제외한 나머지 결과물에서 줄바꿈(\n) 삭제
+        for element in table_tag.find_all(string=True):
+            if element.parent.name != "div":
+                element.replace_with(element.replace("\n", ""))
+
+        add_element("u_10_"+str(random.random()), "table", str(table_tag), get_table_option(None, "auto"))            
+    else:
+        print(f"{title} Remark 표를 포함한 요소를 찾을 수 없습니다. 참고 {item}")
+
 # 속성, 메서드, 이벤트 목록 처리
 def set_item_list(soup, module_name, module_category, title="Property"):
     content_title_td = soup.find('td', class_='sub_title', string=title)
@@ -217,7 +294,10 @@ def set_property_data(module_name, module_category, property):
 
     if property_soup.find('td', class_='sub_title', string="Remark"):
         add_element(f"p_11_{property}", "headline", "참고")
-        add_element(f"p_12_{property}", "pre", get_desc_text(property_soup, "Remark", property))       
+        remark_desc, remark_table = get_desc_text(property_soup, "Remark", property, True)
+        add_element(f"p_12_{property}", "pre", remark_desc)
+        if remark_table:
+            get_simple_table_content(property_soup, remark_table, property)     
 
 # 메서드 데이터 처리
 def set_method_data(module_name, module_category, method):
@@ -248,7 +328,7 @@ def set_method_data(module_name, module_category, method):
         add_element(f"m_09_{method}", "headline", "참고")
         add_element(f"m_10_{method}", "pre", get_desc_text(method_soup, "Remark", method))        
 
-# 속성 데이터 처리
+# 이벤트 데이터 처리
 def set_event_data(module_name, module_category, event):
     event_soup = get_soup(module_name, module_category, "Event", event)     
 
@@ -357,9 +437,9 @@ def get_html_text(target_text):
 
 # (공통 함수) 표 config
 # Object > Supported Environments (110,110,110,110,110,110,110)
-def get_table_option(layout="110,110,110,110,110,110,110"):
+def get_table_option(layout="110,110,110,110,110,110,110", bAuto="user"):
     return {
-        "table_layout": "user",
+        "table_layout": bAuto,
         "codeLanguage": "Javascript",
         "table_layout_setting": layout
     }
@@ -447,12 +527,12 @@ def generate_object_file(target_module_name, target_module_cagegory, constructor
 # 개별 파일 테스트 용
 # 개별 파일 테스트 시에는 아래 for 문을 주석 처리하고 테스트 진행
 '''
-target_module_name = ''
+target_module_name = 'Environment'
 target_module_category = ''
-target_constructor_except = 
+target_constructor_except = None
 generate_object_file(target_module_name, target_module_category, target_constructor_except)
 '''
-        
+
 # 오브젝트 목록 JSON 파일 읽기
 with open('file_list.json', 'r') as file:
     data = json.load(file)
@@ -462,12 +542,12 @@ for category in data['categorys']:
 
     # items 항목 순회
     for item in category['items']:
+        elements = []
         target_module_name = item['name']
         target_constructor_except = item.get('except', False)
         temp_target_module_category = item.get('category', target_module_category)
         print(target_module_name)
         generate_object_file(target_module_name, temp_target_module_category, target_constructor_except)
-
 
 end_time = time.time()
 execution_time = end_time - start_time

@@ -1,16 +1,16 @@
 {
   "items": [
     {
-      "id": "PARA_01",
-      "name": "PARA_01"
+      "id": "Environment",
+      "name": "Environment"
     },
     {
-      "id": "PARA_02",
-      "name": "PARA_02"
+      "id": "Grid",
+      "name": "Grid"
     },
     {
-      "id": "PARA_03",
-      "name": "PARA_03"
+      "id": "GridClickEventInfo",
+      "name": "GridClickEventInfo"
     }
   ]
 }

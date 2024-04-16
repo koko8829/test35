@@ -486,11 +486,11 @@ def generate_object_file(target_module_name, target_module_cagegory, constructor
 
     if soup.find('td', class_='sub_title', string="Basic Key Action"):    
         add_element("u_11", "heading2", "Basic Key Action")
-        get_table_content(soup, "Basic Key Action", "120,120,?", True)
+        get_table_content(soup, "Basic Key Action", "120,180,?", True)
 
     if soup.find('td', class_='sub_title', string="Accessibility Key Action"):  
         add_element("u_12", "heading2", "Accessibility Key Action")
-        get_table_content(soup, "Accessibility Key Action", "120,120,?", True)
+        get_table_content(soup, "Accessibility Key Action", "120,180,?", True)
 
     if soup.find('td', class_='sub_title', string="Constructor"):      
         add_element("u_13", "heading2", "생성자")
